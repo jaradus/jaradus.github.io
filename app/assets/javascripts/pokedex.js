@@ -21,8 +21,13 @@ var PokemonView = Backbone.View.extend({
 
 var PokemonListView = Backbone.View.extend({
     initialize: function() {
+        var self = this;
         this.collection = new PokemonCollection();
         this.views = [];
+
+        this.collection.on("sync", function(){
+            self.render();
+        })
     },
 
     el: function() {
