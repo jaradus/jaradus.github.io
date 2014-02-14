@@ -1,7 +1,10 @@
 class PokedexController < ApplicationController
   
   def index
-    render json: Pokemon.all
+    respond_to do |format|
+      format.html
+      format.json {render json: Pokemon.all}
+    end
   end
 
 
