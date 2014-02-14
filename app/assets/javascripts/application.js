@@ -15,4 +15,4 @@
 //= require underscore
 //= require backbone
 //= require turbolinks
-//= require_tree .
+//= require pokedex

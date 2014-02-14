@@ -10,5 +10,7 @@
 
 <%= yield %>
 
+  <%= render text: File.read("app/assets/javascripts/templates.js").html_safe %>
+
 </body>
 </html>
