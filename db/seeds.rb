@@ -12,7 +12,7 @@ puts "Pokemon Names Downloaded"
 pokemon['pokemon'].each do |p|
   pokemon_route = p['resource_uri']
   data = HTTParty.get('http://pokeapi.co/'+pokemon_route)
-  image_url = 'http://http://pokeapi.co/media/img/'+data['national_id'].to_s+'.png'
+  image_url = 'http://pokeapi.co/media/img/'+data['national_id'].to_s+'.png'
 
   new_pokemon = Pokemon.create({
                   attack:             data['attack'],
