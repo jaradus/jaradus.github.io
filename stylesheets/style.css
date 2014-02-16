@@ -77,7 +77,7 @@ a:hover {
 }
 
 .header h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'Helvetiva Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   color: #ffffff;
 }
@@ -92,33 +92,69 @@ a:hover {
   border-radius: 50px;
 }
 
+/* Info Panel */
+
+.info-panel {
+  margin-left: 15px;
+}
+
+.info-panel .top-bar {
+  width: 90%;
+  background-color: #61626e;
+  height: 3px;
+  margin-top: 20px;
+}
+
+#info-source:hover .top-bar, #info-projects:hover .top-bar, #info-contact:hover .top-bar {
+  background-color: #00ffff;
+}
+
+.info-panel h3 {
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: 'Lato', 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+}
+
+.info-panel p,a {
+  color: #5e5f67;
+}
+
+.info-panel a:visited {
+  color: #5e5f67;
+}
+
+.info-panel a:hover {
+  color: #ababbf;
+  text-decoration: underline;
+}
+
 /* CARBOY */
 
-.carboy {
+#carboy {
   margin-right: 30px;
 }
 
-.carboy h1 {
+#carboy h1 {
   margin-left: 100px;
 }
 
-.carboy p {
+#carboy p {
   text-align: left;
   margin-left: 125px;
 }
 
-.carboy a {
+#carboy a {
   color: #ff0000;
 }
 
-.carboy a:hover {
+#carboy a:hover {
   color: #800000;
 }
 
 /* PHOTOS */
 
 
-.timely img {
+#timely img {
   width: 100%;
 }
 
