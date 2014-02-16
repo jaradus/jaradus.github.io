@@ -1,4 +1,5 @@
 <script id="pokemon_template" type="text/template">
+<div>
  <tr>
      <td>
      <img src=<%= image_url %> />
@@ -33,4 +34,5 @@
         </ul>
      </td>
  </tr>
+</div>
 </script>

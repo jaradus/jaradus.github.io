@@ -1,0 +1,26 @@
+body {
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width: 745px;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 541px;
+  overflow: scroll;
+  background-image: url('/assets/pokedex.png');
+  background-position: fixed;
+  background-repeat: none;
+}
+
+.pokemon_list_view ul {
+  background-color: white;
+}
+
+li {
+  list-style: none;  
+}
