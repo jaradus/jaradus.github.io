@@ -124,8 +124,13 @@ a:hover {
 }
 
 .info-panel a:hover {
-  color: #ababbf;
+  color: #b1b4bf;
   text-decoration: underline;
+}
+
+.info-panel i {
+  margin-right: 15px;
+  font-size: 40px;
 }
 
 /* CARBOY */
