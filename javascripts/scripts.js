@@ -55,6 +55,8 @@ $(function(){
 
   consoleName();
 
+  $(".header .attributes").typeOut();
+
   $(window).on('scroll', parallax);
 
 })
