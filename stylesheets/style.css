@@ -96,6 +96,7 @@ a:hover {
 
 .info-panel {
   margin-left: 15px;
+  height: 250px;
 }
 
 .info-panel .top-bar {
