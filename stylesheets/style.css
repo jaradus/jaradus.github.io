@@ -94,14 +94,6 @@ a:hover {
 
 /* CARBOY */
 
-.carboy-image {
-  z-index: -1000;
-}
-
-.carboy-copy {
-  z-index: 1000;
-}
-
 .carboy {
   margin-right: 30px;
 }
