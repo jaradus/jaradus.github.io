@@ -58,11 +58,11 @@ var PokemonView = Backbone.View.extend({
         weight:             this.$('.weight').val()
       });
  */
-      this.model.save({}, {success: function(){ pokemon_list_view.collection.fetch()}});
+      this.model.save({}, {success: function(){ window.pokemon_list_view.collection.fetch()}});
     },
 
     delete: function(){
-      this.model.destroy()
+      this.model.destroy();
     }
 
 

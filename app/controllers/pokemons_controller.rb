@@ -1,7 +1,7 @@
 class PokemonsController < ApplicationController
 
   def index
-    render json: Pokemon.all
+    render json: Pokemon.order(:name)
   end
 
   def create
