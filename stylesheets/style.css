@@ -7,6 +7,19 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+div h1 {
+  color: #ffffff;
+}
+
+.sticky{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; 
+  opacity: .75;
+}
+
 .container {
   background-color: #2a2b35;
   box-shadow: 0px 0px 22px #000000;
@@ -79,35 +92,45 @@ a:hover {
   border-radius: 50px;
 }
 
-div h1 {
-  color: #ffffff;
+/* CARBOY */
+
+.carboy-image {
+  z-index: -1000;
 }
 
-.sticky{
-  position:fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1; 
-  opacity: .75;
+.carboy-copy {
+  z-index: 1000;
+}
+
+.carboy {
+  margin-right: 30px;
+}
+
+.carboy h1 {
+  margin-left: 100px;
+}
+
+.carboy p {
+  text-align: left;
+  margin-bottom: 0px;
+  margin-left: 125px;
+}
+
+.carboy a {
+  color: #ff0000;
+}
+
+.carboy a:hover {
+  color: #800000;
 }
 
 /* PHOTOS */
 
-.photo1 {
-  background-color: lightblue;
-  /*background-image:url('/images/carboy/carboy_beer.png');*/
-  background-size: cover;
-  background-position: 0 -85px;
-}
-
-.photo2 {
-  background-color: lightgreen;
-  /*background-image:url('/images/carboy/carboy_batches.png');*/
-  background-size: cover;
-  background-position: 0 -85px;
-}
 
 .timely img {
   width: 100%;
+}
+
+.brewerydb {
+  width: 40%;
 }
