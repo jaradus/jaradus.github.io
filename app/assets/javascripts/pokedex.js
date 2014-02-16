@@ -1,9 +1,9 @@
 var Pokemon = Backbone.Model.extend({
     url: function(){
       if(this.get("id")){
-        return "/pokemons/" + this.get("id")
+        return "/pokemons/" + this.get("id");
       } else {
-        return '/pokemons'
+        return '/pokemons';
       }
     }
 });
@@ -32,7 +32,12 @@ var PokemonView = Backbone.View.extend({
 
     sync: function(){
       var self = this;
-      this.model.set({
+        for ( var attr in this.model.attributes ) {
+            this.model.set(
+                attr, self.$("." + attr).val()
+            );
+        }
+/*      this.model.set({
         attack:             this.$('.attack').val(),
         catch_rate:         this.$('.catch_rate').val(),
         defense:            this.$('.defense').val(),
@@ -51,8 +56,9 @@ var PokemonView = Backbone.View.extend({
         speed:              this.$('.speed').val(),
         total:              this.$('.total').val(),
         weight:             this.$('.weight').val()
-      })
-      this.model.save({}, {success: function(){ pokemon_list_view.collection.fetch()}})
+      });
+ */
+      this.model.save({}, {success: function(){ pokemon_list_view.collection.fetch()}});
     },
 
     delete: function(){
@@ -70,7 +76,7 @@ var PokemonListView = Backbone.View.extend({
 
         this.collection.on("sync", function(){
             self.render();
-        })
+        });
     },
 
     el: function() {
@@ -95,9 +101,7 @@ var PokemonListView = Backbone.View.extend({
 
             self.views.push(pokemon_view);
         });
-    },
-
-
+    }
 });
 
 
