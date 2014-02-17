@@ -14,6 +14,11 @@ var PokemonCollection = Backbone.Collection.extend({
 });
 
 var PokemonView = Backbone.View.extend({
+
+    initialize: function() {
+        this.model.view = this;
+    },
+
     el: function() {
         return $(this.template(this.model.attributes));
     },
@@ -39,6 +44,10 @@ var PokemonView = Backbone.View.extend({
       this.model.save({}, {success: function(){ window.pokemon_list_view.collection.fetch()}});
     },
 
+    render: function() {
+        $("#pokemon_container").append( this.$el );
+    },
+
     delete: function(){
       this.model.destroy();
     }
@@ -57,7 +66,7 @@ var PokemonSelectView = Backbone.View.extend({
 
             _.each(window.pokemon_list_view.collection.models, function(pokemon){
                 if (pokemon.get("name") == pokemon_name ){
-
+                    pokemon.view.render();
 }
             });
         });
