@@ -17,7 +17,6 @@ var PokemonView = Backbone.View.extend({
     el: function() {
         return $(this.template(this.model.attributes));
     },
-
     template: function(attribute_hash) {
         var html_string = $("#pokemon_template").html();
 
@@ -37,27 +36,6 @@ var PokemonView = Backbone.View.extend({
                 attr, self.$("." + attr).val()
             );
         }
-/*      this.model.set({
-        attack:             this.$('.attack').val(),
-        catch_rate:         this.$('.catch_rate').val(),
-        defense:            this.$('.defense').val(),
-        egg_cycles:         this.$('.egg_cycles').val(),
-        ev_yield:           this.$('.ev_yield').val(),
-        exp:                this.$('.exp').val(),
-        growth_rate:        this.$('.growth_rate').val(),
-        happiness:          this.$('.happiness').val(),
-        height:             this.$('.height').val(),
-        hp:                 this.$('.hp').val(),
-        image_url:          this.$('.image_url').val(),
-        male_female_ratio:  this.$('.male_female_ratio').val(),
-        sp_atk:             this.$('.sp_atk').val(),
-        sp_def:             this.$('.sp_def').val(),
-        species:            this.$('.species').val(),
-        speed:              this.$('.speed').val(),
-        total:              this.$('.total').val(),
-        weight:             this.$('.weight').val()
-      });
- */
       this.model.save({}, {success: function(){ window.pokemon_list_view.collection.fetch()}});
     },
 
@@ -73,6 +51,17 @@ var PokemonSelectView = Backbone.View.extend({
         this.views = [];
 
         this.render();
+
+        $("#view_in_pokedex_btn").on("click", function() {
+            var pokemon_name = $(this).parent().find("#pokemon_select").val();
+
+            _.each(window.pokemon_list_view.collection.models, function(pokemon){
+                if (pokemon.get("name") == pokemon_name ){
+
+}
+            });
+        });
+
 
         this.collection.on("sync", function(){
             self.render();
