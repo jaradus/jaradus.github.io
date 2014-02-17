@@ -70,13 +70,51 @@ li {
   top: 263px;
   left: 797px;
   width: 218px;
-  height: 169px;
+  height: 196px;
   overflow-x: hidden;
   overflow: scroll;
 }
 
 #pokemon_headshot h1 {
   margin: 0;
+}
+
+#pokemon_headshot .delete {
+  background-color: #d90002;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000000;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+#pokemon_headshot .delete:hover {
+  background-color: #ff6666;
+}
+
+#pokemon_headshot .delete:active {
+  background-color: #800000;
+}
+
+#pokemon_headshot .update {
+  background-color: #01d302;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000000;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+#pokemon_headshot .update:hover {
+  background-color: #01ff03;
+}
+
+#pokemon_headshot .update:active {
+  background-color: #009202;
 }
 
 #pokemon_stats {
