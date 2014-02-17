@@ -1,9 +1,9 @@
 var Pokemon = Backbone.Model.extend({
     url: function(){
       if(this.get("id")){
-        return "/pokemons/" + this.get("id");
+          return "/pokemons/" + this.get("id");
       } else {
-        return '/pokemons';
+          return '/pokemons';
       }
     }
 });
