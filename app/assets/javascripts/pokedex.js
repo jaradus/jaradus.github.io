@@ -45,6 +45,13 @@ var PokemonView = Backbone.View.extend({
     },
 
     render: function() {
+
+        $('#pokemon_headshot').empty();
+        $('#pokemon_headshot').remove();
+        
+        $('#pokemon_stats').empty();
+        $('#pokemon_stats').remove();
+
         $("#pokemon_container").append( this.$el );
     },
 
