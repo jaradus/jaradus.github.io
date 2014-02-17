@@ -8,7 +8,27 @@ var Pokemon = Backbone.Model.extend({
     },
 
     defaults: {
-        image_url: ""
+        attack: '',
+        catch_rate: '',
+        defense: '',
+        egg_cycles: '',
+        ev_yield: '',
+        exp: '',
+        growth_rate: '',
+        happiness: '',
+        height: '',
+        hp: '',
+        image_url: '',
+        'male_female_ratio': '',
+        name: '',
+        national_id: '',
+        resource_uri: '',
+        sp_atk: '',
+        sp_def: '',
+        species: '',
+        speed: '',
+        total: '',
+        weight: ''
     }
 });
 
