@@ -22,6 +22,7 @@ var PokemonView = Backbone.View.extend({
     el: function() {
         return $(this.template(this.model.attributes));
     },
+
     template: function(attribute_hash) {
         var html_string = $("#pokemon_template").html();
 
@@ -60,8 +61,8 @@ var PokemonView = Backbone.View.extend({
 
         if (this.model.get("id")) {
             // Append edit and update buttons if item is in the database
-            this.$el.append($("<button>", {class: "update", text: "update"}));
-            this.$el.append($("<button>", {class: "delete", text: "delete"}));
+            this.$el.first().append($("<button>", {class: "update", text: "update"}));
+            this.$el.first().append($("<button>", {class: "delete", text: "delete"}));
         }
 
     },
