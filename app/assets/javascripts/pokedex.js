@@ -30,9 +30,10 @@ var PokemonView = Backbone.View.extend({
     },
 
     events: {
-      "click .update": "sync",
-      "click .delete": "delete"
+        "click .update": "sync",
+        "click .delete": "delete"
     },
+
 
     sync: function(){
       var self = this;
@@ -112,7 +113,7 @@ var PokemonSelectView = Backbone.View.extend({
 
         _.each(this.collection.models, function(pokemon) {
             var pokemon_view = new PokemonView({model: pokemon });
- 
+
             self.$el.append("<option>"+ pokemon_view.model.get("name") + "</option>" );
             self.views.push(pokemon_view);
         });
