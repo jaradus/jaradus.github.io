@@ -5,6 +5,10 @@ var Pokemon = Backbone.Model.extend({
       } else {
           return '/pokemons';
       }
+    },
+
+    defaults: {
+        image_url: ""
     }
 });
 
@@ -18,8 +22,6 @@ var PokemonView = Backbone.View.extend({
     initialize: function() {
         this.model.view = this;
     },
-
-
 
     el: function() {
         return $(this.template(this.model.attributes));
@@ -38,7 +40,8 @@ var PokemonView = Backbone.View.extend({
 
 
     sync: function(){
-      var self = this;
+        console.log("worked");
+        var self = this;
         for ( var attr in this.model.attributes ) {
             if (attr == 'id') {
                 continue;
@@ -98,20 +101,35 @@ var PokemonSelectView = Backbone.View.extend({
         this.collection.on("sync", function(){
             self.render();
         });
-        this.createEvent();
+        this.createTemplateEvent();
     },
 
-    createEvent: function() {
+
+
+    createTemplateEvent: function() {
+
+        var create_action =  function() {
+            $("#create_new_pokemon").on("click", function() {
+                var new_pokemon = new Pokemon();
+                var new_pokemon_view = new PokemonView({model: new_pokemon});
+                console.log(new_pokemon_view);
+                console.log(new_pokemon_view.attributes);
+                new_pokemon_view.sync();
+            });
+        };
+
         $("#add_new_pokemon_btn").on("click", function() {
             var template =  function() {
-                var html_string = $("#pokemon_template").html();
+                var html_string = $("#new_pokemon_template").html();
                 //var template_function = _.template(html_string);
                 return html_string;
             };
 
             $("#pokemon_container").append( template() );
-
+            $("#pokemon_container").find("#pokemon_headshot").append("<button id='create_new_pokemon'>Create</button>");
+            create_action();
         });
+
     },
 
     el: function() {
