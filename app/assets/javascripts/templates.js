@@ -24,6 +24,13 @@
     <li>Total:                <input type='text' class='total_input' value=<%= total %> /></li>
     <li>Weight:               <input type='text' class='weight_input' value=<%= weight %> /></li>
     <li>Image Url:            <input type='text' class='image_url_input' value=<%= image_url %> /></li>
+    <li>name:                 <input type='text' class='name_input' value=<%= name %> /></li>
+    <li>national_id:          <input type='text' class='national_id_input' value=<%= national_id %> /></li>
+    <li>resource_uri:         <input type='text' class='resource_uri_input' value=<%= resource_uri %> /></li>
   </ul>
 </div>
 </script>
+
+
+
+

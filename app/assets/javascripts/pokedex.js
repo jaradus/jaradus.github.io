@@ -37,27 +37,40 @@ var PokemonView = Backbone.View.extend({
     sync: function(){
       var self = this;
         for ( var attr in this.model.attributes ) {
+            if (attr == 'id') {
+                continue;
+            }
             this.model.set(
-                attr, self.$("." + attr).val()
+                attr, self.$("."+attr+"_input").val()
             );
         }
-      this.model.save({}, {success: function(){ window.pokemon_list_view.collection.fetch()}});
+
+      // this.model.save(this.model.attributes, {success: function(){ window.pokemon_list_view.collection.fetch()}});
+      this.model.save();
     },
 
     render: function() {
 
         $('#pokemon_headshot').empty();
         $('#pokemon_headshot').remove();
-        
+
         $('#pokemon_stats').empty();
         $('#pokemon_stats').remove();
 
         $("#pokemon_container").append( this.$el );
+
+        if (this.model.get("id")) {
+            // Append edit and update buttons if item is in the database
+            this.$el.append($("<button>", {class: "update", text: "update"}));
+            this.$el.append($("<button>", {class: "delete", text: "delete"}));
+        }
+
     },
 
     delete: function(){
       this.model.destroy();
     }
+
 });
 
 var PokemonSelectView = Backbone.View.extend({
@@ -96,14 +109,7 @@ var PokemonSelectView = Backbone.View.extend({
 
         _.each(this.collection.models, function(pokemon) {
             var pokemon_view = new PokemonView({model: pokemon });
-/*
- self.$el.append(pokemon_view.$el);
-            if (pokemon_view.model.get("id")) {
-                // Append edit and update buttons if item is in the database
-                pokemon_view.$('.pokemon_stats').append($("<button>", {class: "update", text: "update"}));
-                pokemon_view.$('.pokemon_stats').append($("<button>", {class: "delete", text: "delete"}));
-            }
- */
+ 
             self.$el.append("<option>"+ pokemon_view.model.get("name") + "</option>" );
             self.views.push(pokemon_view);
         });
