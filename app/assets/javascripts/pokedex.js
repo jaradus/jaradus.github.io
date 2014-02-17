@@ -19,10 +19,11 @@ var PokemonView = Backbone.View.extend({
         this.model.view = this;
     },
 
+
+
     el: function() {
         return $(this.template(this.model.attributes));
     },
-
     template: function(attribute_hash) {
         var html_string = $("#pokemon_template").html();
 
@@ -62,8 +63,8 @@ var PokemonView = Backbone.View.extend({
 
         if (this.model.get("id")) {
             // Append edit and update buttons if item is in the database
-            this.$el.first().append($("<button>", {class: "update", text: "update"}));
-            this.$el.first().append($("<button>", {class: "delete", text: "delete"}));
+            this.$el.append($("<button>", {class: "update", text: "update"}));
+            this.$el.append($("<button>", {class: "delete", text: "delete"}));
         }
 
     },
@@ -96,6 +97,20 @@ var PokemonSelectView = Backbone.View.extend({
 
         this.collection.on("sync", function(){
             self.render();
+        });
+        this.createEvent();
+    },
+
+    createEvent: function() {
+        $("#add_new_pokemon_btn").on("click", function() {
+            var template =  function() {
+                var html_string = $("#pokemon_template").html();
+                //var template_function = _.template(html_string);
+                return html_string;
+            };
+
+            $("#pokemon_container").append( template() );
+
         });
     },
 
