@@ -45,8 +45,7 @@ var PokemonView = Backbone.View.extend({
             );
         }
 
-      // this.model.save(this.model.attributes, {success: function(){ window.pokemon_list_view.collection.fetch()}});
-      this.model.save();
+      this.model.save({}, {success: function(){ window.pokemon_list_view.collection.fetch()}});
     },
 
     render: function() {
@@ -68,7 +67,8 @@ var PokemonView = Backbone.View.extend({
     },
 
     delete: function(){
-      this.model.destroy();
+        console.log("BLAH!")
+      this.model.destroy({success: function(){ window.pokemon_list_view.collection.fetch()}});
     }
 
 });
@@ -87,7 +87,7 @@ var PokemonSelectView = Backbone.View.extend({
             _.each(window.pokemon_list_view.collection.models, function(pokemon){
                 if (pokemon.get("name") == pokemon_name ){
                     pokemon.view.render();
-}
+            }
             });
         });
 
@@ -103,6 +103,9 @@ var PokemonSelectView = Backbone.View.extend({
 
     render: function() {
         var self = this;
+
+        $('#pokemon_select').empty();
+
         _.each(this.views, function(view) {
             view.remove();
         });
