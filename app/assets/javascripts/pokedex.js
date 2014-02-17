@@ -64,15 +64,15 @@ var PokemonView = Backbone.View.extend({
     delete: function(){
       this.model.destroy();
     }
-
-
 });
 
-var PokemonListView = Backbone.View.extend({
+var PokemonSelectView = Backbone.View.extend({
     initialize: function() {
         var self = this;
         this.collection = new PokemonCollection();
         this.views = [];
+
+        this.render();
 
         this.collection.on("sync", function(){
             self.render();
@@ -80,7 +80,7 @@ var PokemonListView = Backbone.View.extend({
     },
 
     el: function() {
-        return $("#pokemon_list_view");
+        return $("#pokemon_select");
     },
 
     render: function() {
@@ -91,14 +91,15 @@ var PokemonListView = Backbone.View.extend({
 
         _.each(this.collection.models, function(pokemon) {
             var pokemon_view = new PokemonView({model: pokemon });
-            self.$el.append(pokemon_view.$el);
-
+/*
+ self.$el.append(pokemon_view.$el);
             if (pokemon_view.model.get("id")) {
                 // Append edit and update buttons if item is in the database
                 pokemon_view.$('.pokemon_stats').append($("<button>", {class: "update", text: "update"}));
                 pokemon_view.$('.pokemon_stats').append($("<button>", {class: "delete", text: "delete"}));
             }
-
+ */
+            self.$el.append("<option>"+ pokemon_view.model.get("name") + "</option>" );
             self.views.push(pokemon_view);
         });
     }
@@ -106,6 +107,6 @@ var PokemonListView = Backbone.View.extend({
 
 
 $(function(){
-    window.pokemon_list_view = new PokemonListView();
+    window.pokemon_list_view = new PokemonSelectView();
     window.pokemon_list_view.collection.fetch();
 });
