@@ -9,7 +9,7 @@ body {
 }
 
 div h1 {
-  color: #ffffff;
+  color: #000000;
 }
 
 .sticky{
@@ -46,7 +46,7 @@ ul li .text-intro {
   position: absolute;
   top: 175px;
   left: 723px;
-  color: #ffffff;
+  color: #1a1a1a;
   font-family: Helvetica Neue;
 }
 
@@ -57,6 +57,12 @@ a {
 
 a:hover {
   color: #008d8d;
+}
+
+/* BREAK */
+
+.break {
+  height: 50px;
 }
 
 /* HEADER */
@@ -138,6 +144,10 @@ a:hover {
 .skills ul {
   list-style-type: disc;
   margin-bottom: 0px;
+}
+
+.skills li {
+  height: 20px;
 }
 
 /* CARBOY */

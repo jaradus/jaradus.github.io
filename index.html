@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="stylesheets/layout.css" />
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/refactor_style.css" />
 
 </head>
 <body>
@@ -22,21 +22,25 @@
 <div class="container">  
 
   <div class="header">
-    <h1>Hi, I&#8217;m Ethan Schmertzler</h1>
+    <h1>Ethan Schmertzler</h1>
     <h2 class="attributes">Full Stack Developer | Angel Investor | Homebrewer</h2>
     <div class="chevrons one column offset-by-seven">
       <img src="/images/header/chevrons.png" />
     </div>
   </div>
 
-  <ul class="parallax">
-
   <!-- Contact -->
-    <li class="info-panel">
+    <div class="info-panel">
       <div id="info-source" class="one-third column">
         <div class="top-bar"></div>
         <h3 class="info-panel-header">Source</h1>
         <p>New York by way of Middlebury College, PTC Therapeutics, and True Ventures.</p>
+        <ul class="skills">
+          <li><strong>Technical Skills</strong></li>
+          <li>Ruby + Rails</li>
+          <li>Javascript + jQuery + Underscore + Backbone</li>
+          <li>Adobe Photoshop + InDesign</li>
+        </ul>
       </div>
       <div id="info-projects" class="one-third column">
         <div class="top-bar"></div>
@@ -48,13 +52,15 @@
         <div class="top-bar"></div>
         <h3 class="info-panel-header">Get in touch</h1>
         <p>
-          <a href="#"><i class="fa fa-envelope"></i></a>
+          <a href="mailto:ethanschmertzler@mac.com"><i class="fa fa-envelope"></i></a>
           <a target="_blank" href="http://linkedin.com/in/ethanschmertzler/"><i class="fa fa-linkedin"></i></a>
           <a target="_blank" href="https://github.com/jaradus/"><i class="fa fa-github-alt"></i></a>
         </p>
       </div>
-    </li>
+    </div>
 
+
+  <ul class="parallax">
 
   <!-- Timely -->
     <li id="timely">
@@ -68,6 +74,13 @@
       </div>
     </li>
 
+  <!-- Break -->
+  <li class='break'>
+    <div class="sixteen columns">
+      <hr>
+    </div>
+  </li>
+
   <!-- Carboy -->
     <li id="carboy">
       <div class="carboy-image parallax-background ten columns alpha">
@@ -80,6 +93,13 @@
         <p><img class='brewerydb' src="/images/carboy/Powered-By-BreweryDB.png" alt="Powered by Brewery DB"></p>
       </div>
     </li>
+
+  <!-- Break -->
+  <li class='break'>
+    <div class="sixteen columns">
+      <hr>
+    </div>
+  </li>
 
     <!-- Footer -->
     <li id="footer">
