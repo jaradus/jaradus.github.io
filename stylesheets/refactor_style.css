@@ -1,0 +1,187 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Monoton|Abril+Fatface);
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F2F1ED;
+  color: #444;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+div h1 {
+  color: #ffffff;
+}
+
+.sticky{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; 
+  opacity: .75;
+}
+
+.container {
+  background-color: #F2F1ED;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-background {
+  height: 715px;
+}
+
+ul li {
+  list-style: none;
+  overflow: hidden;
+  height: 600px;
+  position:relative;
+  margin-bottom: 0px;
+}
+
+ul li .text-intro {
+  position: absolute;
+  top: 175px;
+  left: 723px;
+  color: #ffffff;
+  font-family: Helvetica Neue;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #008d8d;
+}
+
+/* HEADER */
+
+.header {
+  color: #0953a0;
+  background: #ff6666;
+  margin-bottom: 0px;
+  padding: 20px 0 20px 0;
+  height: 500px;
+}
+
+.header h1 {
+  margin-top: 180px;
+  font-family: 'Abril Fatface', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  font-size: 80px;
+}
+
+.header h2 {
+  font-family: 'Lato', 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+
+.chevrons img {
+  margin-top: 110px;
+  background-color: rgba(25,0,0,0.53);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-radius: 50px;
+}
+
+/* Info Panel */
+
+.info-panel {
+  padding-left: 15px;
+  height: 250px;
+  background-color: #ffffff;
+}
+
+.info-panel .top-bar {
+  width: 90%;
+  background-color: #61626e;
+  height: 3px;
+  margin-top: 20px;
+}
+
+#info-source:hover .top-bar, #info-projects:hover .top-bar, #info-contact:hover .top-bar {
+  background-color: #00ffff;
+}
+
+.info-panel h3 {
+  color: #191919;
+  font-family: 'Lato', 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+}
+
+.info-panel p,a {
+  color: #5e5f67;
+}
+
+.info-panel a:visited {
+  color: #5e5f67;
+}
+
+.info-panel a:hover {
+  color: #b1b4bf;
+  text-decoration: underline;
+}
+
+.info-panel i {
+  margin-right: 15px;
+  font-size: 40px;
+}
+
+.skills ul {
+  list-style-type: disc;
+  margin-bottom: 0px;
+}
+
+/* CARBOY */
+
+#carboy {
+  margin-right: 30px;
+}
+
+#carboy h1 {
+  margin-left: 100px;
+}
+
+#carboy p {
+  text-align: left;
+  margin-left: 125px;
+}
+
+#carboy a {
+  color: #ff0000;
+}
+
+#carboy a:hover {
+  color: #800000;
+}
+
+/* FOOTER */
+
+#footer {
+  margin-bottom: 100px;
+  height: 100%;
+}
+
+#footer div {
+  background-color: #000000;
+  height: 50px;
+}
+
+/* PHOTOS */
+
+
+#timely img {
+  width: 100%;
+}
+
+.brewerydb {
+  width: 40%;
+}

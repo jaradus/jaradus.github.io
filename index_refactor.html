@@ -10,24 +10,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <!-- CSS -->
+<link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/layout.css" />
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/refactor_style.css" />
 
 </head>
 <body>
 
-<ul class="parallax">
-  <li>
-    <div class="header-photo"></div>
-    <div class="header">
-      <h1>Hi, I&#8217;m Ethan Schmertzler</h1>
-      <h2 class="attributes">Full Stack Developer | Angel Investor | Homebrewer</h2>
-      <div class="chevrons">
-        <img src="/images/header/chevrons.png" />
-      </div>
+<div class="container">  
+
+  <div class="header">
+    <h1>Ethan Schmertzler</h1>
+    <h2 class="attributes">Full Stack Developer | Angel Investor | Homebrewer</h2>
+    <div class="chevrons one column offset-by-seven">
+      <img src="/images/header/chevrons.png" />
     </div>
-  </li>
-</ul>
+  </div>
+
+  <ul class="parallax">
+
+  <!-- Contact -->
+    <li class="info-panel">
+      <div id="info-source" class="one-third column">
+        <div class="top-bar"></div>
+        <h3 class="info-panel-header">Source</h1>
+        <p>New York by way of Middlebury College, PTC Therapeutics, and True Ventures.</p>
+        <ul class="skills">
+          <li>Ruby + Rails</li>
+          <li>Javascript + jQuery + Underscore + Backbone</li>
+          <li>Adobe Photoshop + InDesign</li>
+        </ul>
+      </div>
+      <div id="info-projects" class="one-third column">
+        <div class="top-bar"></div>
+        <h3 class="info-panel-header">Projects</h1>
+        <a href="#timely">Timely > Mobile Discovery</a><br>
+        <a href="#carboy">Carboy > Homebrew Tracker</a>
+      </div>
+      <div id="info-contact" class="one-third column">
+        <div class="top-bar"></div>
+        <h3 class="info-panel-header">Get in touch</h1>
+        <p>
+          <a href="#"><i class="fa fa-envelope"></i></a>
+          <a target="_blank" href="http://linkedin.com/in/ethanschmertzler/"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" href="https://github.com/jaradus/"><i class="fa fa-github-alt"></i></a>
+        </p>
+      </div>
+    </li>
+
+
+  <!-- Timely -->
+    <li id="timely">
+      <div class="parallax-background ten columns alpha">
+        <img src="/images/timely/mobile.png">
+      </div>
+      <div class="text-intro six columns omega">
+        <h1>Timely</h1>
+        <p><a href="cherry-timely.herokuapp.com">Cherry-timely.herokuapp.com</a></p>
+        <p>Timely is a mobile discovery tool that gives users time- and geolocation-based recommendations for food, drinks, events, and services.</p>
+      </div>
+    </li>
+
+  <!-- Carboy -->
+    <li id="carboy">
+      <div class="carboy-image parallax-background ten columns alpha">
+        <img src="/images/carboy/carboy_batches.png">
+      </div>
+      <div class="carboy-copy text-intro six columns omega">
+        <h1>Carboy</h1>
+        <p><a href="carboy.herokuapp.com">Carboy.herokuapp.com</a></p>
+        <p>Carboy automates note taking for homebrewers, provides the latest recipes from Northern Brewer, and gives up-to-date information on fermentables, hops, specialty grains and ingredients, and yeast available in the marketplace.</p>
+        <p><img class='brewerydb' src="/images/carboy/Powered-By-BreweryDB.png" alt="Powered by Brewery DB"></p>
+      </div>
+    </li>
+
+    <!-- Footer -->
+    <li id="footer">
+      <div class="sixteen columns"></div>
+    </li>
+
+  </ul>
+
+</div>
 
 <!-- JS -->
 <script type="text/javascript" src="javascripts/jquery.js"></script>
