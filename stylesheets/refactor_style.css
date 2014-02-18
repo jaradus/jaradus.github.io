@@ -123,13 +123,13 @@ a:hover {
   font-family: 'Lato', 'Helvetiva Neue', Helvetica, Arial, sans-serif;
 }
 
-.info-panel p,a {
+.info-panel p {
   color: #5e5f67;
 }
 
-.info-panel a:visited {
+/*.info-panel a:visited {
   color: #5e5f67;
-}
+}*/
 
 .info-panel a:hover {
   color: #b1b4bf;
