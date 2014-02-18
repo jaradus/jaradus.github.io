@@ -68,7 +68,7 @@ a:hover {
 /* HEADER */
 
 .header {
-  background: #ff6666;
+  background: #66ccff;
   margin-bottom: 0px;
   padding: 20px 0 20px 0;
   height: 500px;
@@ -78,7 +78,7 @@ a:hover {
   margin-top: 180px;
   font-family: 'Abril Fatface', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #ffffff;
+  color: #191919;
   font-size: 80px;
 }
 
