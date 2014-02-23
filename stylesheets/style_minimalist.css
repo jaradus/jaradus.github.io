@@ -60,10 +60,27 @@ header a {
   letter-spacing: 1px;
 }
 
+/*===============================*/
+
+/* ========== Nav ========== */
+
 nav {
   margin-right: 68px;
   float: right;
   z-index: 2000;
+}
+
+nav p {
+  margin-bottom: 0px;
+}
+
+nav i {
+  color: #429EDB;
+  font-size: 1.5em;
+}
+
+nav i.hover {
+  color: #76d5ff;
 }
 
 /*===============================*/
@@ -85,7 +102,7 @@ nav {
 }
 
 .info-panel p {
-  font-family: 'Athelas-Regular';
+  font-family: 'Athelas';
   font-size: 20px;
   color: #4A4A4A;
   line-height: 1.2em;

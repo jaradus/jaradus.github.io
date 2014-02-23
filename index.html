@@ -30,6 +30,15 @@
 <script type="text/javascript" src="javascripts/backbone.js"></script>
 <script type="text/javascript" src="javascripts/typeout.js"></script>
 <script type="text/javascript" src="javascripts/scripts_minimalist.js"></script>
+<script type="text/javascript">
+  (function(d) {
+    var config = {
+      kitId: 'kqu2tpw',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 
 
 <!-- Templates -->
@@ -57,10 +66,16 @@
     <p>New York, NY</p>
     <br>
     <p class="strong">Email</p>
-      <p><a href=""></a></p>
+      <p><a class="email_link cyan" href="#">ethan.developer</a></p>
+    <br>
+    <p class="strong">LinkedIn</p>
+      <p><a target="_blank" href="http://linkedin.com/in/ethanschmertzler/"><i class="fa fa-linkedin"></i></a></p>
+    <br>
+    <p class="strong">GitHub</p>
+      <p><a target="_blank" href="https://github.com/jaradus/"><i class="fa fa-github-alt"></i></a></p>
     <br>
     <p class="strong">Twitter</p>
-      <p><a href=""></a></p>
+      <p><a target="_blank" href="https://twitter.com/eschmertzler" class="cyan">@eschmertzler</a></p>
   </nav>
 </script>
 

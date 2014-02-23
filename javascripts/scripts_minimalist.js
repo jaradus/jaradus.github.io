@@ -75,18 +75,21 @@ var App = Backbone.Router.extend({
   },
 
   home: function(){
+    console.log("Home")
     app.current_page = "home"
     if (ui) ui.remove()
     var ui = new UI()
   },
 
   about: function(){
+    console.log("About")
     app.current_page = "about"
     if (ui) ui.remove()
     var ui = new UI()
   },
 
   portfolio: function(){
+    console.log("Portfolio")
     app.current_page = "portfolio"
     if (ui) ui.remove()
     var ui = new UI()
@@ -110,7 +113,6 @@ var UI = Backbone.View.extend({
     });
 
     if (app.current_page == "portfolio") {
-      console.log("Portfolio");
       $(window).on('scroll', parallax);
     }
 
