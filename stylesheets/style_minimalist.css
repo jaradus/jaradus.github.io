@@ -1,2 +1,100 @@
-/* About Me @mobile: */
+/* ========== Global Formatting ========== */
 
+body {
+  background: #ffffff;
+}
+
+/*===============================*/
+
+
+/* FOOTER */
+
+#footer {
+  margin-bottom: 30px;
+  height: 100%;
+}
+
+#footer div {
+  text-align: center;
+  height: 50px;
+}
+
+.stars {
+  color: #0000ff;
+}
+
+.stripes {
+  color: #ff0000;
+}
+
+
+/* ###################################### */
+/* #### Mobile Responsive Formatting #### */
+/* ###################################### */
+
+@media (max-width: 768px) {
+
+  /* ========== Header ========== */
+
+  header {
+    background: #6B7C92;
+    border: 1px solid #ffffff;
+    margin-bottom: 15px;
+  }
+
+  .header-text {
+    margin-left: 15px;
+    margin-top: 13px;
+    font-family: 'HelveticaNeue-Thin';
+    font-size: 1.5em;
+    color: #ffffff;
+    line-height: 31px;
+    letter-spacing: 1px;
+  }
+
+  /*===============================*/
+
+  /* ========== About Me ========== */
+
+  .info-panel {
+    /*margin-top: 50px;*/
+  }
+
+  .info-panel h3 {
+    font-family: 'HelveticaNeue-Bold';
+    font-size: 1em;
+    color: #333333;
+    line-height: 35px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+
+  .info-panel p {
+    font-family: 'Athelas-Regular';
+    font-size: 20px;
+    color: #4A4A4A;
+    line-height: 1.2em;
+  }
+
+  a.red {
+    color: #D0021B;
+    text-decoration: none;
+  }
+
+  a.red:hover {
+    color: #ff6666;
+  }
+
+  a.cyan,span.cyan {
+    color: #429EDB;
+    text-decoration: none;
+  }
+
+  a.cyan:hover,span.cyan:hover{
+    color: #76d5ff;
+  }
+
+  /*===============================*/
+
+}

@@ -10,54 +10,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
-<link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css" />
-<link rel="stylesheet" type="text/css" href="stylesheets/layout.css" />
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="stylesheets/style_minimalist.css" />
+<link rel="stylesheet" type="text/css" target="_blank" href="stylesheets/base.css" />
+<link rel="stylesheet" type="text/css" target="_blank" href="stylesheets/skeleton.css" />
+<link rel="stylesheet" type="text/css" target="_blank" href="stylesheets/layout.css" />
+<link target="_blank" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" target="_blank" href="stylesheets/style_minimalist.css" />
 
 </head>
 <body>
 
 <header>
-  <h1 class="header_text">Ethan Schmertzler</h1>
+  <h1 class="header-text">Ethan Schmertzler</h1>
+  <div id="navigation"></div>
 </header>
 
 <div class="container">  
   
-  <div id="technologies">
-    <h3>Technologies</h3>
-    <p>
-      I enjoy working in <a class="red" href="">Ruby</a>, on and off the <a href="" class="red">Rails</a>, sometimes using <a href="" class="red">Sinatra</a> for lightweight applictions.
-    </p>
-    <p>
-      My daily front-end toolkit includes Javascript (paired with the <a href="" class="red">jQuery</a>, <a href="" class="red">Underscore</a>, <a href="" class="red">Backbone</a>, and <a href="" class="red">D3</a> libraries), HTML5, and CSS3.
-    </p>
-    <p>
-      I love a good <a href="" class="red">postgres</a> database.
-    </p>
-    <p>
-      I don’t often use front-end frameworks, but when I do, I use <a href="" class="red">Skeleton</a> or <a href="" class="red">Foundation</a>.
-    </p>
-  </div>
 
-  <div id="colophon">
-    <h3>Colophon</h3>
-    <p>
-      Version controlled on and served from my <a href="" class="cyan">Github</a> profile, this site was built using jQuery and Backbone on a sixteen-column grid adapted from Skeleton.
-    </p>
-    <p>
-      It was designed in <a href="" class="cyan">Sketch</a> and written using <a href="" class="cyan">Sublime Text 3</a>. Photographs were taken on a Nikon D40 and processed in <a href="" class="cyan">Aperture</a>. <a href="" class="cyan">Photoshop</a> provided the graphics. Header fonts are Helvetica Neue, and the serif body text uses Athelas.
-    </p>
-  </div>
 
-  <div id="contact_me">
-    <h3>Contact Me</h3>
-    <p>
-      I’m easily accessible by <a href="" class="cyan">email</a> or on Twitter at <a href="" class="cyan">@eschmertzler</a>.
-    </p>
-  </div>
+</div>
 
+<!-- Break -->
+<div class='break'>
+  <div class="sixteen columns">
+    <hr>
+  </div>
+</div>
+
+  <!-- Footer -->
+<div id="footer">
+  <div class="sixteen columns">
+    Made with lots of <span><i class="fa fa-coffee"></i></span> in the USA</br>
+    <span class="stars">&#9641;</span><span class="stripes">&#9636;&#9636;</span>
+  </div>
 </div>
 
 <!-- JS -->
@@ -65,7 +50,45 @@
 <script type="text/javascript" src="javascripts/underscore.js"></script>
 <script type="text/javascript" src="javascripts/backbone.js"></script>
 <script type="text/javascript" src="javascripts/typeout.js"></script>
-<script type="text/javascript" src="javascripts/scripts.js"></script>
+<script type="text/javascript" src="javascripts/scripts_minimalist.js"></script>
+
+<!-- Templates -->
+<script id="about_template" type="text/template">
+  
+  <div class="info-panel six columns" id="technologies">
+    <h3>Technologies</h3>
+    <p>
+      I enjoy working in <a class="red" target="_blank" href="https://www.ruby-lang.org/en/">Ruby</a>, on and off the <a target="_blank" href="http://rubyonrails.org/" class="red">Rails</a>, sometimes using <a target="_blank" href="http://www.sinatrarb.com/" class="red">Sinatra</a> for lightweight applictions.
+    </p>
+    <p>
+      My daily front-end toolkit includes Javascript (paired with the <a target="_blank" href="http://jquery.com/" class="red">jQuery</a>, <a target="_blank" href="http://underscorejs.org/" class="red">Underscore</a>, <a target="_blank" href="http://backbonejs.org/" class="red">Backbone</a>, and <a target="_blank" href="http://d3js.org/" class="red">D3</a> libraries), HTML5, and CSS3.
+    </p>
+    <p>
+      I love a good <a target="_blank" href="http://www.postgresql.org/" class="red">postgres</a> database.
+    </p>
+    <p>
+      I don’t often use front-end frameworks, but when I do, I use <a target="_blank" href="http://www.getskeleton.com/" class="red">Skeleton</a> or <a target="_blank" href="http://foundation.zurb.com/" class="red">Foundation</a>.
+    </p>
+  </div>
+
+  <div class="info-panel four columns" id="contact-me">
+    <h3>Contact Me</h3>
+    <p>
+      I’m easily reachable by <span class="cyan">email</span>. You can follow me on Twitter at <a target="_blank" href="https://twitter.com/eschmertzler" class="cyan">@eschmertzler</a>.
+    </p>
+  </div>
+
+  <div class="info-panel six columns offset-by-nine" id="colophon">
+    <h3>Colophon</h3>
+    <p>
+      Version controlled on and served from my <a target="_blank" href="https://github.com/jaradus" class="cyan">Github</a> profile, this site was built using jQuery and Backbone on a sixteen-column grid adapted from Skeleton.
+    </p>
+    <p>
+      It was designed in <a target="_blank" href="http://www.bohemiancoding.com/sketch/" class="cyan">Sketch</a> and written using <a target="_blank" href="http://www.sublimetext.com/" class="cyan">Sublime Text 3</a>. Photographs were taken on a Nikon D40 and processed in <a target="_blank" href="https://www.apple.com/aperture/" class="cyan">Aperture</a>. <a target="_blank" href="http://www.adobe.com/products/photoshop.html" class="cyan">Photoshop</a> provided the graphics. Header fonts are Helvetica Neue, and the serif body text uses Athelas.
+    </p>
+  </div>
+
+</script>
 
 </body>
 </html>
