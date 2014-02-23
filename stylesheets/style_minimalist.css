@@ -4,8 +4,141 @@ body {
   background: #ffffff;
 }
 
+.container {
+  opacity: 0;
+}
+
+a.red {
+  color: #D0021B;
+  text-decoration: none;
+}
+
+a.red:hover {
+  color: #ff6666;
+}
+
+a.cyan,span.cyan {
+  color: #429EDB;
+  text-decoration: none;
+}
+
+a.cyan:hover,span.cyan:hover{
+  color: #76d5ff;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+a.strong {
+  text-decoration: none;
+}
+
 /*===============================*/
 
+
+
+/* ========== Header ========== */
+
+header {
+  background: #6B7C92;
+  border: 1px solid #ffffff;
+  margin-bottom: 15px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.header-text {
+  margin-left: 15px;
+  margin-top: 13px;
+  font-family: 'HelveticaNeue-Thin';
+  font-size: 1.5em;
+  color: #ffffff;
+  line-height: 31px;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-right: 68px;
+  float: right;
+  z-index: 2000;
+}
+
+/*===============================*/
+
+/* ========== About Me ========== */
+
+.info-panel {
+  /*margin-top: 50px;*/
+}
+
+.info-panel h3 {
+  font-family: 'HelveticaNeue-Bold';
+  font-size: 1em;
+  color: #333333;
+  line-height: 35px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.info-panel p {
+  font-family: 'Athelas-Regular';
+  font-size: 20px;
+  color: #4A4A4A;
+  line-height: 1.2em;
+}
+
+
+/*===============================*/
+
+/* ========== Portfolio ========== */
+
+/* TIMELY */
+
+#timely a {
+  color: #53aad6;
+}
+
+#timely a:hover {
+  color: #66ccff;
+}
+
+#timely img {
+  width: 100%;
+}
+
+
+/* CARBOY */
+
+#carboy {
+  margin-right: 30px;
+}
+
+#carboy h1 {
+  margin-left: 100px;
+}
+
+#carboy p {
+  text-align: left;
+  margin-left: 125px;
+}
+
+#carboy a {
+  color: #ff0000;
+}
+
+#carboy a:hover {
+  color: #800000;
+}
+
+.brewerydb {
+  width: 40%;
+}
+
+/*===============================*/
 
 /* FOOTER */
 
@@ -25,6 +158,35 @@ body {
 
 .stripes {
   color: #ff0000;
+}
+
+/* ################## */
+/* #### Parallax #### */
+/* ################## */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-background {
+  height: 715px;
+}
+
+ul li {
+  list-style: none;
+  overflow: hidden;
+  height: 600px;
+  position:relative;
+  margin-bottom: 0px;
+}
+
+ul li .text-intro {
+  position: absolute;
+  top: 175px;
+  left: 723px;
+  color: #1a1a1a;
+  font-family: 'Helvetica Neue;'
 }
 
 
@@ -50,49 +212,6 @@ body {
     color: #ffffff;
     line-height: 31px;
     letter-spacing: 1px;
-  }
-
-  /*===============================*/
-
-  /* ========== About Me ========== */
-
-  .info-panel {
-    /*margin-top: 50px;*/
-  }
-
-  .info-panel h3 {
-    font-family: 'HelveticaNeue-Bold';
-    font-size: 1em;
-    color: #333333;
-    line-height: 35px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-  }
-
-  .info-panel p {
-    font-family: 'Athelas-Regular';
-    font-size: 20px;
-    color: #4A4A4A;
-    line-height: 1.2em;
-  }
-
-  a.red {
-    color: #D0021B;
-    text-decoration: none;
-  }
-
-  a.red:hover {
-    color: #ff6666;
-  }
-
-  a.cyan,span.cyan {
-    color: #429EDB;
-    text-decoration: none;
-  }
-
-  a.cyan:hover,span.cyan:hover{
-    color: #76d5ff;
   }
 
   /*===============================*/

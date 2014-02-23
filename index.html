@@ -19,30 +19,9 @@
 </head>
 <body>
 
-<header>
-  <h1 class="header-text">Ethan Schmertzler</h1>
-  <div id="navigation"></div>
-</header>
-
-<div class="container">  
-  
+<div id="main_container">
 
 
-</div>
-
-<!-- Break -->
-<div class='break'>
-  <div class="sixteen columns">
-    <hr>
-  </div>
-</div>
-
-  <!-- Footer -->
-<div id="footer">
-  <div class="sixteen columns">
-    Made with lots of <span><i class="fa fa-coffee"></i></span> in the USA</br>
-    <span class="stars">&#9641;</span><span class="stripes">&#9636;&#9636;</span>
-  </div>
 </div>
 
 <!-- JS -->
@@ -52,9 +31,91 @@
 <script type="text/javascript" src="javascripts/typeout.js"></script>
 <script type="text/javascript" src="javascripts/scripts_minimalist.js"></script>
 
+
 <!-- Templates -->
+<script id="header_template" type="text/template">
+  <header>
+      <a href="#home"><h1 class="header-text">Ethan Schmertzler</h1></a>      
+  </header>
+</script>
+
+<script id="nav_template" type="text/template">
+  <nav>
+    <p>
+      <a href="#home" class="strong">Ethan Schmertzler</a>
+    </p>
+    <br>
+    <p>
+      <a class="cyan" href="#about">About</a>
+    </p>
+    <p>
+      <a class="cyan" href="#portfolio">Portfolio</a>
+    </p>
+    <br>
+    <p>Full stack developer</p>
+    <p>Angel investor</p>
+    <p>New York, NY</p>
+    <br>
+    <p class="strong">Email</p>
+      <p><a href=""></a></p>
+    <br>
+    <p class="strong">Twitter</p>
+      <p><a href=""></a></p>
+  </nav>
+</script>
+
+<script id="portfolio_template" type="text/template">
+  <div class="container">
+  
+  
+    <h2>Portfolio</h2>
+  
+
+    <ul class="parallax">
+
+    <!-- Timely -->
+      <li id="timely">
+        <div class="parallax-background nine columns alpha">
+          <img src="/images/timely/mobile.png">
+        </div>
+        <div class="text-intro five columns omega">
+          <h1>Timely</h1>
+          <p><a target="_blank" href="http://cherry-timely.herokuapp.com">Cherry-timely.herokuapp.com</a> | 
+          <a target="_blank" href="https://github.com/jaradus/timely">Github Repository</a></p>
+          <p>Timely is a mobile discovery tool that gives users time- and geolocation-based recommendations for food, drinks, events, and services.</p>
+        </div>
+      </li>
+
+    <!-- Break -->
+    <li class='break'>
+      <div class="sixteen columns">
+        <hr>
+      </div>
+    </li>
+
+    <!-- Carboy -->
+      <li id="carboy">
+        <div class="carboy-image parallax-background nine columns alpha">
+          <img src="/images/carboy/carboy_batches.png">
+        </div>
+        <div class="carboy-copy text-intro five columns omega">
+          <h1>Carboy</h1>
+          <p><a target="_blank" href="http://carboy.herokuapp.com">Carboy.herokuapp.com</a> | 
+          <a target="_blank" href="https://github.com/jaradus/carboy">Github Repository</a></p>
+          <p>Carboy automates note taking for homebrewers, provides the latest recipes from Northern Brewer, and gives up-to-date information on fermentables, hops, specialty grains and ingredients, and yeast available in the marketplace.</p>
+          <p><a target="_blank" href="http://www.brewerydb.com/"><img class='brewerydb' src="/images/carboy/Powered-By-BreweryDB.png" alt="Powered by Brewery DB"></a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</script>
+
 <script id="about_template" type="text/template">
   
+<div class="container">
+  <div class="fourteen columns">
+    <h2>About Me</h2>
+  </div>
   <div class="info-panel six columns" id="technologies">
     <h3>Technologies</h3>
     <p>
@@ -87,7 +148,25 @@
       It was designed in <a target="_blank" href="http://www.bohemiancoding.com/sketch/" class="cyan">Sketch</a> and written using <a target="_blank" href="http://www.sublimetext.com/" class="cyan">Sublime Text 3</a>. Photographs were taken on a Nikon D40 and processed in <a target="_blank" href="https://www.apple.com/aperture/" class="cyan">Aperture</a>. <a target="_blank" href="http://www.adobe.com/products/photoshop.html" class="cyan">Photoshop</a> provided the graphics. Header fonts are Helvetica Neue, and the serif body text uses Athelas.
     </p>
   </div>
+</div>
 
+</script>
+
+<script id="footer_template" type="text/template">
+  <!-- Break -->
+  <div class='break'>
+    <div class="sixteen columns">
+      <hr>
+    </div>
+  </div>
+
+    <!-- Footer -->
+  <div id="footer">
+    <div class="sixteen columns">
+      Made with lots of <span><i class="fa fa-coffee"></i></span> in the USA</br>
+      <span class="stars">&#9641;</span><span class="stripes">&#9636;&#9636;</span>
+    </div>
+  </div>
 </script>
 
 </body>
