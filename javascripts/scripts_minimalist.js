@@ -104,16 +104,17 @@ var UI = Backbone.View.extend({
   initialize: function(attributes){
     this.render({
       heading: new UI.Heading(),
+      nav:     new UI.Nav(),
       body:    new UI.Body(),
       footer:  new UI.Footer()
     });
 
     if (app.current_page == "portfolio") {
-      console.log("Portfolio")
-      $(window).on('scroll', parallax)
+      console.log("Portfolio");
+      $(window).on('scroll', parallax);
     }
 
-    $('')
+    $('.email_link').attr('href',"mailto:ethan.developer@icloud.com?subject=Hello");
 
   },
 
@@ -160,6 +161,29 @@ UI.Heading = Backbone.View.extend({
 
   template: function(){
     var template = $('#header_template').html()
+    return template
+  }
+
+})
+
+// ####################################
+// ##########    Header    ############
+// ####################################
+
+UI.Nav = Backbone.View.extend({
+  initialize: function(){
+    
+  },
+
+  render: function(){
+    this.$el.html(this.template({
+      page_name: app.current_page
+    }))
+    return this;
+  },
+
+  template: function(){
+    var template = $('#nav_template').html()
     return template
   }
 
