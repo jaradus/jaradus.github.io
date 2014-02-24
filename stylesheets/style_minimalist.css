@@ -6,7 +6,7 @@ body {
 
 .container {
   opacity: 0;
-  z-index: -2000;
+  margin-left: 95px;
 }
 
 a.red {
@@ -79,9 +79,10 @@ header a {
 /* ========== Nav ========== */
 
 nav {
-  margin-right: 68px;
-  float: right;
-  z-index: 2000;
+  position: fixed;
+  margin-right: 121px;
+  left: auto;
+  right: 0;
 }
 
 nav p {
@@ -93,7 +94,7 @@ nav i {
   font-size: 1.5em;
 }
 
-nav i.hover {
+nav i:hover {
   color: #76d5ff;
 }
 
@@ -231,6 +232,14 @@ ul li .text-intro {
 /* ###################################### */
 
 @media (max-width: 768px) {
+
+  /* ===== Global Attributes===== */
+  
+  .container {
+    margin-left: 30px;
+  }
+
+  /* ============================ */
 
   /* ========== Header ========== */
 
