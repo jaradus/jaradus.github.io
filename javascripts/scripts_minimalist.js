@@ -154,6 +154,8 @@ UI.Heading = Backbone.View.extend({
     
   },
 
+  el: "<div class='header-bar'>",
+
   render: function(){
     this.$el.html(this.template({
       page_name: app.current_page

@@ -80,6 +80,15 @@ header a {
   color: #D0021B;
 }
 
+.nav-links-trigger {
+  display: none;
+}
+
+.nav-links {
+  display: none;
+}
+
+
 /*===============================*/
 
 /* ========== Nav ========== */
@@ -316,6 +325,12 @@ ul li .text-intro {
     text-decoration: none;
   }
 
+  .header-text:hover {
+    color: #191919;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
   .header-text {
     margin-left: 15px;
     margin-top: 13px;
@@ -324,6 +339,63 @@ ul li .text-intro {
     color: #ffffff;
     line-height: 31px;
     letter-spacing: 1px;
+    
+  }
+
+  .mobile-navigation .nav-links-trigger {
+    font-family: 'HelveticaNeue-Thin';
+    font-size: 1.5em;
+    background: #6B7C92;
+    border: none;
+    padding: 15px;
+    color: #cccccc;
+    font-weight: normal;
+    text-shadow: none;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    margin-right: 0;
+    display: inline;
+  }
+
+  .nav-links-trigger:active {
+    color: #191919;
+  }
+
+  .nav-links-trigger .nav-bar-open {
+    background: #3F5164;
+  }
+
+  .nav-links {
+    display: list-item;
+    background: #3F5164;
+    position: absolute;
+    right: 0;
+    top: 4em;
+    border-right: 1px white solid;
+    z-index: 2000;
+  }
+
+  .nav-links li {
+    height: 100%;
+    padding: 1em;
+  }
+
+  .nav-links a {
+    color: #cccccc;
+  }
+
+  .nav-links li:hover {
+    background: #6784a5;
+  }
+
+  .nav-links li:hover a {
+    color: #e6e6e6;
+  }
+
+  .articles {
+    margin-left: 0%;
+    width: 100%;
   }
 
   .home-header h1 {
