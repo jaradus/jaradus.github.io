@@ -358,12 +358,21 @@ ul li .text-intro {
     display: inline;
   }
 
-  .nav-links-trigger:active {
-    color: #191919;
+  .nav-links-trigger:hover {
+    background: #505e6f;
   }
 
-  .nav-links-trigger .nav-bar-open {
+  .nav-links-trigger:active {
+    color: #cccccc;
+    background: #465160;
+  }
+
+  .nav-links-trigger.nav-bar-open {
     background: #3F5164;
+  }
+
+  .nav-links.hidden {
+    display: none;
   }
 
   .nav-links {
@@ -374,6 +383,7 @@ ul li .text-intro {
     top: 4em;
     border-right: 1px white solid;
     z-index: 2000;
+    opacity: 0;
   }
 
   .nav-links li {

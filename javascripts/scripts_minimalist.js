@@ -117,6 +117,10 @@ var UI = Backbone.View.extend({
     }
 
     $('.email_link').attr('href',"mailto:ethan.developer@icloud.com?subject=Hello");
+    $('.nav-links-trigger').click(function(e){
+      $(this).toggleClass("nav-bar-open");
+      $('.nav-links').toggleClass("hidden").delay(100).animate({ opacity: 1 }, 100);
+    })
 
   },
 
@@ -170,9 +174,9 @@ UI.Heading = Backbone.View.extend({
 
 })
 
-// ####################################
-// ##########    Header    ############
-// ####################################
+// #################################
+// ##########    Nav    ############
+// #################################
 
 UI.Nav = Backbone.View.extend({
   initialize: function(){
