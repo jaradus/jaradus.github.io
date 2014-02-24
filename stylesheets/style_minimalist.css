@@ -6,6 +6,7 @@ body {
 
 .container {
   opacity: 0;
+  z-index: -2000;
 }
 
 a.red {
@@ -34,6 +35,20 @@ a.strong {
   text-decoration: none;
 }
 
+a.black-cyan:hover {
+  color: #429EDB;
+}
+
+.thin {
+  font-family: 'HelveticaNeue-Thin';
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: 'HelveticaNeue-Bold';
+  font-size: 1em;
+}
+
 /*===============================*/
 
 
@@ -41,8 +56,7 @@ a.strong {
 /* ========== Header ========== */
 
 header {
-  background: #6B7C92;
-  border: 1px solid #ffffff;
+  border-top: 5px #429EDB solid;
   margin-bottom: 15px;
 }
 
@@ -51,11 +65,11 @@ header a {
 }
 
 .header-text {
-  margin-left: 15px;
-  margin-top: 13px;
+  margin-left: 58px;
+  margin-top: 20px;
   font-family: 'HelveticaNeue-Thin';
   font-size: 1.5em;
-  color: #ffffff;
+  color: #429EDB;
   line-height: 31px;
   letter-spacing: 1px;
 }
@@ -82,6 +96,11 @@ nav i {
 nav i.hover {
   color: #76d5ff;
 }
+
+/*.nav-hr {
+  margin-top: 1px;
+  margin-bottom: 0px;
+}*/
 
 /*===============================*/
 
@@ -221,6 +240,10 @@ ul li .text-intro {
     margin-bottom: 15px;
   }
 
+  header a {
+    text-decoration: none;
+  }
+
   .header-text {
     margin-left: 15px;
     margin-top: 13px;
@@ -232,5 +255,14 @@ ul li .text-intro {
   }
 
   /*===============================*/
+
+  /* ========== Nav ========== */
+
+  nav {
+    display: none;
+  }
+
+  /*===============================*/
+
 
 }
