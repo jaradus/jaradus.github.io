@@ -113,14 +113,39 @@ nav i:hover {
 
 /* ========== Home ========== */
 
-.articles {
-  padding-top: 3%;
-  margin-left: 4%;
+.home-header h1 {
+  font-family: 'Athelas-Bold';
+  font-size: 50px;
+  color: #000000;
+  line-height: 10px;
+  letter-spacing: 1px;
+  margin-top: 4%;
+  margin-bottom: 2.5%;
 }
 
-.grid {
-  display: inline-block;
-  width: 26%;
+.home-header h2 {
+  font-family: 'HelveticaNeue-Thin';
+  font-size: 30px;
+  color: #000000;
+  line-height: 36px;
+  letter-spacing: 1px;
+  margin-bottom: 6%;
+}
+
+.articles {
+  padding-top: 9%;
+  margin-left: 6%;
+  width: 80%;
+}
+
+.grid-left {
+  width: 50%;
+  float: left;
+}
+
+.grid-right {
+  width: 50%;
+  float: right;
 }
 
 .ninety-note {
@@ -133,8 +158,8 @@ nav i:hover {
   position: absolute;
   text-transform: uppercase;
   z-index: 1986;
-  top: 14em;
-  left: -1%;
+  top: 15.5em;
+  left: -1.5%;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -300,6 +325,31 @@ ul li .text-intro {
     line-height: 31px;
     letter-spacing: 1px;
   }
+
+  .home-header h1 {
+    display: none;
+  }
+
+  .home-header h2 {
+    padding-top: 2%;
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  .ninety-note {
+    font-weight: lighter;
+    top: 6.5em;
+    left: 100%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .grid-left, .grid-right {
+    width: 100%;
+  }
+
 
   /*===============================*/
 
