@@ -61,6 +61,7 @@ header {
 }
 
 header a {
+  width: 180px;
   text-decoration: none;
 }
 
@@ -72,6 +73,11 @@ header a {
   color: #429EDB;
   line-height: 31px;
   letter-spacing: 1px;
+  width: 180px;
+}
+
+.header-text:hover {
+  color: #D0021B;
 }
 
 /*===============================*/
@@ -102,6 +108,38 @@ nav i:hover {
   margin-top: 1px;
   margin-bottom: 0px;
 }*/
+
+/*===============================*/
+
+/* ========== Home ========== */
+
+.articles {
+  padding-top: 3%;
+  margin-left: 4%;
+}
+
+.grid {
+  display: inline-block;
+  width: 26%;
+}
+
+.ninety-note {
+  color: #429EDB;
+  font-size: .75em;
+  opacity: 0.75;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.25em;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 1986;
+  top: 14em;
+  left: -1%;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
 
 /*===============================*/
 
@@ -234,7 +272,7 @@ ul li .text-intro {
 @media (max-width: 768px) {
 
   /* ===== Global Attributes===== */
-  
+
   .container {
     margin-left: 30px;
   }

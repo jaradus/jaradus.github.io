@@ -208,7 +208,7 @@ UI.Body = Backbone.View.extend({
   template: function(template_name){
     switch (template_name) {
       case "home":
-        var source = $('#about_template').html();
+        var source = $('#home_template').html();
         break;
       case "about":
         var source = $('#about_template').html();
