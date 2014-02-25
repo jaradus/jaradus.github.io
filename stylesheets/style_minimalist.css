@@ -421,7 +421,7 @@ ul li .text-intro {
   .ninety-note {
     font-weight: lighter;
     top: 6.5em;
-    left: 100%;
+    left: 90%;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
