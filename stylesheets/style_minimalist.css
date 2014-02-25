@@ -308,7 +308,7 @@ ul li .text-intro {
   /* ===== Global Attributes===== */
 
   .container {
-    margin-left: 0px;
+    margin-left: 10px;
   }
 
   /* ============================ */
@@ -405,7 +405,7 @@ ul li .text-intro {
 
   .articles {
     margin-left: 0%;
-    width: 100%;
+    width: 93%;
   }
 
   .home-header h1 {
