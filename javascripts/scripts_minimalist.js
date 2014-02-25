@@ -31,7 +31,7 @@ var consoleName = function(){
 var parallax = (function() {
   'use strict';
 
-  // console.log("Parallax called")
+  console.log("Parallax called")
 
   var $container = $('.parallax'),
     $divs = $container.find('div.parallax-background'),
@@ -112,10 +112,6 @@ var UI = Backbone.View.extend({
       footer:  new UI.Footer()
     });
 
-    if (app.current_page == "portfolio") {
-      $(window).on('scroll', parallax);
-    }
-
     $('.email_link').attr('href',"mailto:ethan.developer@icloud.com?subject=Hello");
     $('.nav-links-trigger').click(function(e){
       $(this).toggleClass("nav-bar-open");
@@ -142,6 +138,10 @@ var UI = Backbone.View.extend({
       var view_el = view.render().$el
       self.$el.append(view_el)
       $('.container').delay(100).animate({ opacity: 1 }, 100)
+
+      if (app.current_page == "portfolio") {
+        $(window).on('scroll', parallax);
+      }
     })
     return this;
 
