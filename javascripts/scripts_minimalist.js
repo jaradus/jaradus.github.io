@@ -140,8 +140,18 @@ var UI = Backbone.View.extend({
       $('.container').delay(100).animate({ opacity: 1 }, 100)
 
       if (app.current_page == "portfolio") {
+        $('body').css({'background': 'rgba(30,34,36,1)', 'color': 'white'});
+        $('h2').css({'color': 'white'});
+        $('.strong').css({'color': 'white'});
         $(window).on('scroll', parallax);
       }
+
+      if (app.current_page !== "portfolio") {
+        $('body').css({'background': 'white', 'color': '#429EDB'});
+        $('h2').css({'color': 'black'});
+        $('.strong').css({'color': 'black'});
+      }
+
     })
     return this;
 
