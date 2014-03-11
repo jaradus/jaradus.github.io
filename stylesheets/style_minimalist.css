@@ -1,11 +1,17 @@
 /* ========== Global Formatting ========== */
 
+/*#main-container {
+  position: relative;
+}*/
+
 body {
   background: #ffffff;
 }
 
 .container {
+  float: left;
   opacity: 0;
+  width: 70%;
   margin-left: 6.2em;
   margin-bottom: 5em;
 }
@@ -130,11 +136,8 @@ header a {
 /* ========== Nav ========== */
 
 nav {
-  position: fixed;
+  float: right;
   margin-right: 9.5em;
-  left: auto;
-  right: 0;
-  top: 16em;
   z-index: 2000;
 }
 
@@ -166,6 +169,7 @@ nav i:hover {
   position: relative;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 1em;
 }
 
 .home-header {
@@ -201,8 +205,8 @@ nav i:hover {
 
 .headshot {
   position: absolute;
-  top: 7%;
-  left: 71.3%;
+  top: 3%;
+  left: 71.2%;
 }
 
 .grey_box {
@@ -218,7 +222,6 @@ nav i:hover {
 /* ========== Home ========== */
 
 .articles {
-  padding-top: 2%;
   margin-left: 6%;
   width: 90%;
 }
@@ -330,6 +333,7 @@ nav i:hover {
 #footer {
   margin-bottom: 30px;
   height: 100%;
+  color: #474747;
 }
 
 #footer div {

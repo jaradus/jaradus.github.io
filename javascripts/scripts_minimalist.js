@@ -107,8 +107,8 @@ var UI = Backbone.View.extend({
   initialize: function(attributes){
     this.render({
       heading: new UI.Heading(),
-      nav:     new UI.Nav(),
       body:    new UI.Body(),
+      nav:     new UI.Nav(),
       footer:  new UI.Footer()
     });
 
