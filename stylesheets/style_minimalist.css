@@ -56,8 +56,37 @@ h2 {
   font-size: 1em;
 }
 
-/*===============================*/
 
+/* +++++++++++++++++++++++++++++ */
+/* ++++++++++++ Grid +++++++++++ */
+/* +++++++++++++++++++++++++++++ */
+
+.column,.columns { display: inline-block; margin: 0 auto; margin-right: 1em; }
+
+.column.one     { width: 10%;  }
+.columns.two    { width: 20%;  }
+.columns.three  { width: 30%;  }
+.columns.four   { width: 40%;  }
+.columns.five   { width: 50%;  }
+.columns.six    { width: 60%;  }
+.columns.seven  { width: 70%;  }
+.columns.eight  { width: 80%;  }
+.columns.nine   { width: 90%;  }
+.columns.ten    { width: 100%; }
+
+.column.one-third   { width: 33%;  }
+.column.two-thirds  { width: 66%;  }
+
+.offset-by-one    { padding-left: 10%;  }
+.offset-by-two    { padding-left: 20%;  }
+.offset-by-three  { padding-left: 30%;  }
+.offset-by-four   { padding-left: 40%;  }
+.offset-by-five   { padding-left: 50%;  }
+.offset-by-six    { padding-left: 60%;  }
+.offset-by-seven  { padding-left: 70%;  }
+.offset-by-eight  { padding-left: 80%;  }
+.offset-by-nine   { padding-left: 90%;  }
+.offset-by-ten    { padding-left: 100%; }
 
 /* ========= Clearfix ========== */
 
@@ -87,8 +116,6 @@ h2 {
 .cf {
     *zoom: 1;
 }
-
-/* ============================= */
 
 
 /* ========== Header ========== */
@@ -131,8 +158,6 @@ header a {
 }
 
 
-/*===============================*/
-
 /* ========== Nav ========== */
 
 nav {
@@ -161,7 +186,7 @@ nav i:hover {
   margin-bottom: 0px;
 }*/
 
-/*===============================*/
+
 
 /* ========= Name Box ======== */
 
@@ -220,7 +245,7 @@ nav i:hover {
   display: none;
 }
 
-/* =========================== */
+
 
 /* ========== Home ========== */
 
@@ -257,12 +282,12 @@ nav i:hover {
   transform: rotate(-90deg);
 }
 
-/*===============================*/
+
 
 /* ========== About Me ========== */
 
 .info-panel {
-  /*margin-top: 50px;*/
+  vertical-align: top;
 }
 
 .info-panel h3 {
@@ -283,7 +308,6 @@ nav i:hover {
 }
 
 
-/*===============================*/
 
 /* ========== Portfolio ========== */
 
@@ -329,7 +353,6 @@ nav i:hover {
   width: 40%;
 }
 
-/*===============================*/
 
 /* FOOTER */
 
@@ -391,11 +414,10 @@ ul li .text-intro {
   /* ===== Global Attributes===== */
 
   .container {
-    width: 85%;
+    width: 80%;
     margin-left: 10px;
   }
 
-  /* ============================ */
 
   /* ========== Header ========== */
 
@@ -492,10 +514,6 @@ ul li .text-intro {
     width: 93%;
   }
 
-  .home-header h1 {
-    display: none;
-  }
-
   .ninety-note {
     font-weight: lighter;
     top: 11em;
@@ -516,7 +534,7 @@ ul li .text-intro {
 
   /* ====== Name Box ====== */
 
-  .blue_box, .grey_box, .headshot {
+  .blue_box, .grey_box, .headshot, .home-header {
     display: none;
   }
 
@@ -525,10 +543,20 @@ ul li .text-intro {
   }
 
   .mobile_header h2 {
-    font-size: 1.5em;
-    margin-left: 0.4em;
+    margin-left: 0.45em;
     margin-bottom: 0em;
     font-family: 'HelveticaNeue-Thin';
+    line-height: 1.3em;
+    font-size: 1.5em;
+  }
+
+  .mobile_header h3 {
+    margin-left: 0.6em;
+    margin-bottom: 0em;
+    font-family: 'HelveticaNeue-Thin';
+    line-height: 1.3em;
+    font-size: 1.2em;
+    color: #7d7d7d;
   }
 
   /* ====================== */
