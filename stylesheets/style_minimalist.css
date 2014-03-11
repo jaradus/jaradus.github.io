@@ -216,6 +216,9 @@ nav i:hover {
   float: right;
 }
 
+.mobile_header {
+  display: none;
+}
 
 /* =========================== */
 
@@ -388,6 +391,7 @@ ul li .text-intro {
   /* ===== Global Attributes===== */
 
   .container {
+    width: 85%;
     margin-left: 10px;
   }
 
@@ -492,16 +496,11 @@ ul li .text-intro {
     display: none;
   }
 
-  .home-header h2 {
-    padding-top: 2%;
-    font-size: 1.5em;
-    line-height: 1.2em;
-  }
-
   .ninety-note {
     font-weight: lighter;
-    top: 5.5em;
-    left: 88%;
+    top: 11em;
+    left: 79%;
+    width: 17%;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -514,6 +513,26 @@ ul li .text-intro {
 
 
   /*===============================*/
+
+  /* ====== Name Box ====== */
+
+  .blue_box, .grey_box, .headshot {
+    display: none;
+  }
+
+  .mobile_header {
+    display: inline;
+  }
+
+  .mobile_header h2 {
+    font-size: 1.5em;
+    margin-left: 0.4em;
+    margin-bottom: 0em;
+    font-family: 'HelveticaNeue-Thin';
+  }
+
+  /* ====================== */
+
 
   /* ========== Nav ========== */
 
