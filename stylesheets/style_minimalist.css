@@ -6,7 +6,8 @@ body {
 
 .container {
   opacity: 0;
-  margin-left: 95px;
+  margin-left: 6.2em;
+  margin-bottom: 5em;
 }
 
 a.red {
@@ -52,12 +53,43 @@ h2 {
 /*===============================*/
 
 
+/* ========= Clearfix ========== */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* ============================= */
+
 
 /* ========== Header ========== */
 
 header {
   border-top: 5px #429EDB solid;
-  margin-bottom: 15px;
+  margin-bottom: 1.3em;
 }
 
 header a {
@@ -99,14 +131,17 @@ header a {
 
 nav {
   position: fixed;
-  margin-right: 121px;
+  margin-right: 9.5em;
   left: auto;
   right: 0;
+  top: 16em;
   z-index: 2000;
 }
 
 nav p {
-  margin-bottom: 0px;
+  margin-bottom: 0em;
+  color: #282C32;
+  line-height: 1.4em;
 }
 
 nav i {
@@ -125,16 +160,27 @@ nav i:hover {
 
 /*===============================*/
 
-/* ========== Home ========== */
+/* ========= Name Box ======== */
+
+.name_box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-header {
+  position: absolute;
+  top: 4.4em;
+  left: 7em;
+}
 
 .home-header h1 {
   font-family: 'Athelas-Bold';
   font-size: 50px;
-  color: #000000;
+  color: #ffffff;
   line-height: 10px;
   letter-spacing: 1px;
-  margin-top: 4%;
-  margin-bottom: 2.5%;
+  margin-bottom: 5%;
 }
 
 .home-header h2 {
@@ -143,11 +189,36 @@ nav i:hover {
   color: #000000;
   line-height: 36px;
   letter-spacing: 1px;
-  margin-bottom: 6%;
 }
 
+.blue_box {
+  height: 13em;
+  background: #429EDB;
+  width: 77%;
+  float: left;
+  overflow: hidden;
+}
+
+.headshot {
+  position: absolute;
+  top: 7%;
+  left: 71.3%;
+}
+
+.grey_box {
+  height: 13em;
+  width: 23%;
+  background: #393F49;
+  float: right;
+}
+
+
+/* =========================== */
+
+/* ========== Home ========== */
+
 .articles {
-  padding-top: 9%;
+  padding-top: 2%;
   margin-left: 6%;
   width: 90%;
 }
@@ -172,7 +243,7 @@ nav i:hover {
   position: absolute;
   text-transform: uppercase;
   z-index: 1986;
-  top: 15.5em;
+  top: 5.5em;
   left: -1.5%;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
