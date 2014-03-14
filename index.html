@@ -14,6 +14,17 @@
 <link target="_blank" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" target="_blank" href="stylesheets/style_minimalist.css" />
 
+<!-- TypeKit Fonts -->
+<script type="text/javascript">
+  (function(d) {
+    var config = {
+      kitId: 'kqu2tpw',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
 </head>
 <body>
 
@@ -28,15 +39,6 @@
 <script type="text/javascript" src="javascripts/backbone.js"></script>
 <script type="text/javascript" src="javascripts/typeout.js"></script>
 <script type="text/javascript" src="javascripts/scripts_minimalist.js"></script>
-<script type="text/javascript">
-  (function(d) {
-    var config = {
-      kitId: 'kqu2tpw',
-      scriptTimeout: 3000
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
 
 
 <!-- Templates -->
@@ -136,41 +138,35 @@
 <script id="portfolio_template" type="text/template">
   <div class="container">
 
-  
-    <h2>Portfolio</h2>
-  
+   <h2>Portfolio</h2>
+     
 
-    <ul class="parallax">
+     <ul class="parallax">
 
-    <!-- Timely -->
-      <li id="timely">
-        <div class="parallax-background nine columns alpha">
-          <img src="/images/timely/mobile.png">
-        </div>
-        <div class="text-intro five columns omega">
-          <h1>Timely</h1>
-          <p><a target="_blank" href="http://cherry-timely.herokuapp.com">Cherry-timely.herokuapp.com</a> | 
-          <a target="_blank" href="https://github.com/jaradus/timely">Github Repository</a></p>
-          <p>Timely is a mobile discovery tool that gives users time- and geolocation-based recommendations for food, drinks, events, and services.</p>
-        </div>
-      </li>
+       <!-- Defined -->
+         <li class="portfolio_window">
+           <div class="portfolio_image columns ten">
+             <img src="/images/defined/mobile_views.jpg">
+           </div>
+           <div class="text">
+             <p class="red_bar">Data Analytics</p>
+             <h1>Defined</h1>
+           </div>
+         </li>
 
-      <hr>
+        <!-- Timely -->
+          <li class="portfolio_window">
+            <div class="portfolio_image columns ten">
+              <img src="/images/timely/timely.png">
+            </div>
+            <div class="text">
+              <p class="red_bar">Mobile Discovery</p>
+              <h1>Timely</h1>
+            </div>
+          </li>
 
-    <!-- Carboy -->
-      <li id="carboy">
-        <div class="carboy-image parallax-background nine columns alpha">
-          <img src="/images/carboy/carboy_batches.png">
-        </div>
-        <div class="carboy-copy text-intro five columns omega">
-          <h1>Carboy</h1>
-          <p><a target="_blank" href="http://carboy.herokuapp.com">Carboy.herokuapp.com</a> | 
-          <a target="_blank" href="https://github.com/jaradus/carboy">Github Repository</a></p>
-          <p>Carboy automates note taking for homebrewers, provides the latest recipes from Northern Brewer, and gives up-to-date information on fermentables, hops, specialty grains and ingredients, and yeast available in the marketplace.</p>
-          <p><a target="_blank" href="http://www.brewerydb.com/"><img class='brewerydb' src="/images/carboy/Powered-By-BreweryDB.png" alt="Powered by Brewery DB"></a></p>
-        </div>
-      </li>
-    </ul>
+       </ul>
+
   </div>
 </script>
 

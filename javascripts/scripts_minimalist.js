@@ -31,8 +31,6 @@ var consoleName = function(){
 var parallax = (function() {
   'use strict';
 
-  console.log("Parallax called")
-
   var $container = $('.parallax'),
     $divs = $container.find('div.parallax-background'),
     len = $divs.length,
@@ -61,6 +59,13 @@ var parallax = (function() {
   };
 
 })();
+
+  // var parallax = function(){
+  //   console.log("Parallax");
+  //   var scrolled = $(window).scrollTop();
+  //   $('.parallax-bg').css('top', (0 - (scrolled * .75)) + 'px');
+  //   $('.parallax-bg2').css('top', (0 - (scrolled * .50)) + 'px');
+  // };
 
 // ####################################
 // ##########    Router    ############
@@ -153,6 +158,19 @@ var UI = Backbone.View.extend({
       // }
 
     })
+
+    // if (app.current_page == "portfolio") {
+    //   console.log("Parallax on")
+    //   $(function() {
+    //     $(window).on('scroll', parallax);
+    //   });
+    // }
+
+    // if (app.current_page !== "portfolio") {
+    //   console.log("Parallax off")
+    //   $(window).unbind('scroll');
+    // }
+
     return this;
 
   }
@@ -268,8 +286,6 @@ UI.Footer = Backbone.View.extend({
 // ###############################################
 
 $(function(){
-
-  $(window).on('scroll', parallax);
 
   // instantiates app Router
   window.app = new App();
