@@ -143,20 +143,6 @@ var UI = Backbone.View.extend({
       var view_el = view.render().$el
       self.$el.append(view_el)
       $('.container').delay(100).animate({ opacity: 1 }, 100)
-
-      // if (app.current_page == "portfolio") {
-      //   $('body').css({'background': 'rgba(30,34,36,1)', 'color': 'white'});
-      //   $('h2').css({'color': 'white'});
-      //   $('.strong').css({'color': 'white'});
-      //   $(window).on('scroll', parallax);
-      // }
-
-      // if (app.current_page !== "portfolio") {
-      //   $('body').css({'background': 'white', 'color': '#429EDB'});
-      //   $('h2').css({'color': 'black'});
-      //   $('.strong').css({'color': 'black'});
-      // }
-
     })
 
     // if (app.current_page == "portfolio") {
@@ -240,6 +226,7 @@ UI.Body = Backbone.View.extend({
   },
 
   template: function(template_name){
+    var self = this;
     switch (template_name) {
       case "home":
         var source = $('#home_template').html();
@@ -248,7 +235,22 @@ UI.Body = Backbone.View.extend({
         var source = $('#about_template').html();
         break;
       case "portfolio":
-        var source = $('#portfolio_template').html();
+        var pre_compiled_source = $('#portfolio_template').html();
+        var template = Handlebars.compile(pre_compiled_source);
+        var data;
+
+        // Gets the Portfolio json data
+        $.ajax({
+                url: './views/portfolio/portfolio.json',
+                method: 'get',
+                async: false,
+                success: function(json) {
+                  data = json;
+                }
+        });
+
+        console.log("Returned JSON",data)
+        var source = template(data)
         break;
       default:
         var source = $('#about_template').html();

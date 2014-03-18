@@ -1,0 +1,51 @@
+{
+  "sites": [
+            {
+            "project_title": "Defined",
+            "github_repo": "https://github.com/dbushy727/project_defined",
+            "site_url": "http://defined.herokuapp.com",
+            "image_url": "/images/defined/mobile_views.jpg",
+            "category": "Data Analytics",
+            "type": "personal",
+            "technologies": [
+                          "jQuery",
+                          "Backbone",
+                          "Underscore",
+                          "Handlebars",
+                          "Postgres",
+                          "Ruby on Rails"
+                          ],
+            "description": "Defined replaces the workout notebook in the gym, with plan agnostic data analysis built in."
+          },
+          {
+            "project_title": "Timely",
+            "github_repo": "https://github.com/jaradus/timely",
+            "site_url": "http://cherry-timely.herokuapp.com",
+            "image_url": "/images/timely/timely.png",
+            "category": "Mobile Discovery",
+            "type": "personal",
+            "technologies": [
+                          "jQuery",
+                          "Yelp API",
+                          "Google Maps API",
+                          "Postgres",
+                          "Ruby on Rails"
+                          ],
+            "description": "Timely is a mobile discovery tool that gives users time- and geolocation-based recommendations for food, drinks, events, and services."
+          },
+          {
+            "project_title": "Carboy",
+            "github_repo": "https://github.com/jaradus/carboy",
+            "site_url": "http://carboy.herokuapp.com",
+            "image_url": "/images/carboy/carboy.png",
+            "category": "Historical Tracking",
+            "type": "personal",
+            "technologies": [
+                          "Ruby on Rails",
+                          "Postgres",
+                          "BreweryDB API"
+                          ],
+            "description": "Carboy automates note taking for homebrewers, provides the latest recipes from Northern Brewer, and gives up-to-date information on fermentables, hops, specialty grains and ingredients, and yeast available in the marketplace."
+          }
+        ]
+}

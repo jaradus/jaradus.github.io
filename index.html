@@ -37,6 +37,7 @@
 <script type="text/javascript" src="javascripts/jquery.js"></script>
 <script type="text/javascript" src="javascripts/underscore.js"></script>
 <script type="text/javascript" src="javascripts/backbone.js"></script>
+<script type="text/javascript" src="javascripts/handlebars.js"></script>
 <script type="text/javascript" src="javascripts/typeout.js"></script>
 <script type="text/javascript" src="javascripts/scripts_minimalist.js"></script>
 
@@ -117,7 +118,7 @@
     <div class="grid-left">
       <div class="info-panel">
         <h3>Welcome</h3>
-        <p>I'm a full stack web developer in New York, and a member of the Web Development Immersive instructional team at General Assembly.</p>
+        <p>I am a full stack web developer in New York, and a member of the Web Development Immersive instructional team at General Assembly.</p>
       </div>
     </div>
     <div class="grid-right">
@@ -135,37 +136,42 @@
 </div>
 </script>
 
-<script id="portfolio_template" type="text/template">
+<script id="portfolio_template" type="text/x-handlebars-template">
   <div class="container">
 
-   <h2>Portfolio</h2>
-     
+  <h2>Portfolio</h2>
 
-     <ul class="parallax">
 
-       <!-- Defined -->
-         <li class="portfolio_window">
-           <div class="portfolio_image columns ten">
-             <img src="/images/defined/mobile_views.jpg">
-           </div>
-           <div class="text">
-             <p class="red_bar">Data Analytics</p>
-             <h1>Defined</h1>
-           </div>
-         </li>
+    <ul class="parallax">
 
-        <!-- Timely -->
-          <li class="portfolio_window">
-            <div class="portfolio_image columns ten">
-              <img src="/images/timely/timely.png">
-            </div>
-            <div class="text">
-              <p class="red_bar">Mobile Discovery</p>
-              <h1>Timely</h1>
-            </div>
-          </li>
+      {{#sites}}
+      <li class="portfolio_window eighteen columns">
+       <div class="portfolio_image">
+         <img src="{{image_url}}">
+       </div>
+       <div class="text">
+          <p class="red_bar">{{category}}</p>
+          <h1>{{project_title}}</h1>
+          <div hover_info>
+            <p>{{description}}</p>
+            <p>
+              {{#if site_url}}<span><a target="_blank" href="{{site_url}}"><i class="fa fa-external-link"></i> Site</a></span>{{/if}}
+              {{#if github_repo}}<span><a target="_blank" href="{{github_repo}}"><i class="fa fa-github"></i> Github Repo</a></span>{{/if}}
+            </p>
+            <p>
+              <span>Technologies:</span>
+              {{#if technologies}}
+                {{#technologies}}
+                  <span>{{this}}</span>
+                {{/technologies}}
+              {{/if}}
+            </p>
+          </div>
+        </div>
+      </li>
+      {{/sites}}
 
-       </ul>
+    </ul>
 
   </div>
 </script>
@@ -173,10 +179,10 @@
 <script id="about_template" type="text/template">
   
 <div class="container">
-  <div class="ten columns">
+  <div class="eighteen columns">
     <h2>About Me</h2>
   </div>
-  <div class="info-panel four columns" id="technologies">
+  <div class="info-panel eight columns" id="technologies">
     <h3>Technologies</h3>
     <p>
       I enjoy working in <a class="red" target="_blank" href="https://www.ruby-lang.org/en/">Ruby</a>, on and off the <a target="_blank" href="http://rubyonrails.org/" class="red">Rails</a>, sometimes using <a target="_blank" href="http://www.sinatrarb.com/" class="red">Sinatra</a> for lightweight applictions.
@@ -192,14 +198,14 @@
     </p>
   </div>
 
-  <div class="info-panel three columns offset-by-two" id="contact-me">
+  <div class="info-panel five columns offset-by-two" id="contact-me">
     <h3>Contact Me</h3>
     <p>
       I’m easily reachable by <a class="email_link cyan" href="#">email</a>. You can follow me on Twitter at <a target="_blank" href="https://twitter.com/eschmertzler" class="cyan">@eschmertzler</a>.
     </p>
   </div>
 
-  <div class="info-panel four columns offset-by-five" id="colophon">
+  <div class="info-panel seven columns offset-by-seven" id="colophon">
     <h3>Colophon</h3>
     <p>
       Version controlled on and served from my <a target="_blank" href="https://github.com/jaradus" class="cyan">Github</a> profile, this site was built using jQuery and Backbone on a sixteen-column grid adapted from Skeleton.
@@ -215,14 +221,14 @@
 <script id="footer_template" type="text/template">
   <!-- Break -->
   <div class='break'>
-    <div class="ten columns">
+    <div class="eighteen columns">
       <hr>
     </div>
   </div>
 
     <!-- Footer -->
   <div id="footer">
-    <div class="ten columns">
+    <div class="eighteen columns">
       Made with lots of <span><i class="fa fa-coffee"></i></span> in the sunny USA</br>
       <span class="stars">&#9641;</span><span class="stripes">&#9636;&#9636;</span>
     </div>
