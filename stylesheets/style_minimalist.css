@@ -498,7 +498,7 @@
     background: #6B7C92;
     border: 1px solid #ffffff;
     margin-bottom: 16px;
-    height: 4em;
+    height: 4.2em;
   }
 
   header a {
@@ -591,7 +591,7 @@
     font-weight: lighter;
     top: 11em;
     left: 80%;
-    width: 17%;
+    width: auto;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
