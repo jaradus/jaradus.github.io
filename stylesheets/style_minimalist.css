@@ -464,19 +464,32 @@
     margin-bottom: 0.2em;
   }
 
-  div[hover_info]:last-child span:first-child {
+  div[hover_info] p:nth-child(2) span a {
+    color: #ffffff;
+    font-size: 0.8em;
+    background: rgba(0,0,0,0.5);
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+  }
+
+  div[hover_info] p:nth-child(2) span a:hover {
+    background: rgba(66,158,219,0.5);
+    text-decoration: underline;
+  }
+
+  div[hover_info] p:nth-child(3) span:first-child {
     font-weight: bold;
     font-size: 0.8em;
   }
 
-  div[hover_info]:last-child span:nth-child(n+2) {
+  div[hover_info] p:nth-child(3) span:nth-child(n+2) {
     font-size: 0.8em;
-    background: rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.1);
     padding: 0.2em 0.4em;
   }
 
-  div[hover_info]:last-child span:nth-child(n+2):hover {
-    background: rgba(66,158,219,0.5);
+  div[hover_info] p:nth-child(3) span:nth-child(n+2):hover {
+    background: rgba(255,255,255,0.5);
   }
 /* ###################################### */
 /* #### Mobile Responsive Formatting #### */
