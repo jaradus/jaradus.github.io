@@ -145,6 +145,15 @@ var UI = Backbone.View.extend({
       $('.container').delay(100).animate({ opacity: 1 }, 100)
     })
 
+    if (app.current_page == "portfolio" && $(window).width() < 768 ) {
+      console.log("Mobile view")
+      $('.portfolio_window').click(function(e){
+        var target = $(e.target).find("h1");
+        // var target = $(e.target).find("h1")[0].innerText;
+        console.log(target);
+      })
+    }
+
     // if (app.current_page == "portfolio") {
     //   console.log("Parallax on")
     //   $(function() {
@@ -249,7 +258,6 @@ UI.Body = Backbone.View.extend({
                 }
         });
 
-        console.log("Returned JSON",data)
         var source = template(data)
         break;
       default:

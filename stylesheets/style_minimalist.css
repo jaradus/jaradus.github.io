@@ -650,7 +650,15 @@
     display: none;
   }
 
-  /*===============================*/
+  /* ====== Portfolio ====== */
+
+  .text {
+    width: 50%;
+  }
+
+  div[hover_info] {
+    display: none;
+  }
 
 
 }

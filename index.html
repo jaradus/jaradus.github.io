@@ -175,6 +175,32 @@
   </div>
 </script>
 
+<script id="portfolio_modal" type="text/x-handlebars-template">
+
+  <div window-type="modal">
+    <div class="text">
+      <p class="red_bar">{{category}}</p>
+      <h1>{{project_title}}</h1>
+      <div hover_info>
+        <p>{{description}}</p>
+        <p>
+          {{#if site_url}}<span><a target="_blank" href="{{site_url}}"><i class="fa fa-external-link"></i> Site</a></span>{{/if}}
+          {{#if github_repo}}<span><a target="_blank" href="{{github_repo}}"><i class="fa fa-github"></i> Github Repo</a></span>{{/if}}
+        </p>
+        <p>
+          <span>Technologies:</span>
+          {{#if technologies}}
+            {{#technologies}}
+              <span>{{this}}</span>
+            {{/technologies}}
+          {{/if}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</script>
+
 <script id="about_template" type="text/template">
   
 <div class="container">
