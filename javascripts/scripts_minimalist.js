@@ -176,10 +176,10 @@ var UI = Backbone.View.extend({
         $("[window-data='category']").css("color", "#b3b3b3").animate({ opacity: 0.3 }, 200);
 
         $(".exit_modal").click(function(e){
-          $("[window-type='modal']").slideUp({duration: 300}, function(){ $(this).remove(); });
-          $('#main_container').removeAttr('style');
-          $("[window-data='project_title']").removeAttr('style');
-          $("[window-data='category']").removeAttr('style');
+          $("[window-type='modal']").animate({ opacity: 0 }, 500, function(){ $(this).remove(); });
+          $('#main_container').delay(200).animate({ opacity: 1 }, 300, function() {$(this).removeAttr('style')});
+          $("[window-data='project_title']").delay(200).animate({ opacity: 1 }, 300, function() {$(this).removeAttr('style')});
+          $("[window-data='category']").delay(200).animate({ opacity: 1 }, 300, function() {$(this).removeAttr('style')});
           $("#blocker").remove();
         })
 
