@@ -168,12 +168,12 @@ var UI = Backbone.View.extend({
         var template = Handlebars.compile(source);
         var modal = template(data_hash);
 
-        $('body').prepend("<div id='blocker'></div>")
-        $('body').prepend(modal)
-        $('#main_container').css("background", "#4c4c4c").animate({ opacity: 0.3 }, 100)
-        $("[window-data='project_title']").css("color", "#cccccc").animate({ opacity: 0.3 }, 100)
-        $("[window-data='category']").css("color", "#b3b3b3").animate({ opacity: 0.3 }, 100)
-        $("div[window-type='modal']").delay(50).animate({ opacity: 1 }, 300)
+        $('body').prepend("<div id='blocker'></div>");
+        $('body').prepend(modal);
+        $("div[window-type='modal']").delay(200).animate({ opacity: 1 }, 500);
+        $('#main_container').css("background", "#4c4c4c").animate({ opacity: 0.3 }, 200);
+        $("[window-data='project_title']").css("color", "#cccccc").animate({ opacity: 0.3 }, 200);
+        $("[window-data='category']").css("color", "#b3b3b3").animate({ opacity: 0.3 }, 200);
 
         $(".exit_modal").click(function(e){
           $("[window-type='modal']").slideUp({duration: 300}, function(){ $(this).remove(); });
