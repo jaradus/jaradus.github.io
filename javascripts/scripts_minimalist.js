@@ -168,6 +168,7 @@ var UI = Backbone.View.extend({
         var template = Handlebars.compile(source);
         var modal = template(data_hash);
 
+        $('body').prepend("<div id='blocker'></div>")
         $('body').prepend(modal)
         $('#main_container').css("background", "#4c4c4c").animate({ opacity: 0.3 }, 100)
         $("[window-data='project_title']").css("color", "#cccccc").animate({ opacity: 0.3 }, 100)
@@ -179,6 +180,7 @@ var UI = Backbone.View.extend({
           $('#main_container').removeAttr('style');
           $("[window-data='project_title']").removeAttr('style');
           $("[window-data='category']").removeAttr('style');
+          $("#blocker").remove();
         })
 
       })
