@@ -660,5 +660,92 @@
     display: none;
   }
 
+  /* ======== Modal ======== */
+
+  div[window-type="modal"] {
+    z-index: 9999;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: #ffffff;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 3%;
+    /*opacity: 0;*/
+  }
+
+  div[window-type="modal"] h1 {
+    font-family: 'HelveticaNeue-Bold', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  div[window-type="modal"] p {
+    font-family: 'HelveticaNeue-CondensedBold', Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    color: #429EDB;
+  }
+
+  div[window-type="modal"] div p {
+    font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+  }
+
+  div[window-type="modal"] span:first-of-type {
+    font-family: 'HelveticaNeue-Bold', Helvetica, Arial, sans-serif;
+  }
+
+  div[window-type="modal"] a {
+    font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    background: rgba(53, 86, 115, 0.57);
+    padding: 0.7em;
+    color: #ffffff;
+    margin-bottom: 1em;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+
+  div[window-type="modal"] a:hover {
+    background: rgba(53, 86, 115, 1);
+  }
+
+  div[window-type="modal"] a:active {
+    background: #429EDB;
+  } 
+
+  span[window-data="technology"] {
+    background: rgba(255,255,255,0.1);
+    padding: 0.2em 0.4em;
+  }
+
+  div.exit_modal {
+    background: #ff6666;
+    font-family: 'HelveticaNeue-Thin', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    padding: 0.1em .5em 0.5em .5em;
+    text-align: center;
+    box-shadow: 3px 5px 0px 0px #983939;
+    width: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.7em;
+    -webkit-transition: background 0.3s ease, box-shadow 0.1s linear;
+    -moz-transition: background 0.3s ease, box-shadow 0.1s linear;
+    -o-transition: background 0.3s ease, box-shadow 0.1s linear;
+    transition: background 0.3s ease, box-shadow 0.1s linear;
+  }
+
+  div.exit_modal:hover {
+    background: #ff3d4f;
+  }
+
+  div.exit_modal:active {
+    background: #7f1f29;
+    box-shadow: none;
+  }
+
 
 }

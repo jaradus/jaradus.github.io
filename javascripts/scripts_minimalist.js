@@ -148,9 +148,39 @@ var UI = Backbone.View.extend({
     if (app.current_page == "portfolio" && $(window).width() < 768 ) {
       console.log("Mobile view")
       $('.portfolio_window').click(function(e){
-        var target = $(e.target).find("h1");
-        // var target = $(e.target).find("h1")[0].innerText;
-        console.log(target);
+        var target = $(e.target).closest("li.portfolio_window");
+        var technology_array = [];
+        $.each(target.find("[window-data='technology']"),function(index,technology){ 
+                                                                                      technology_array.push(technology.innerText);
+                                                                                    });
+        var data_hash = {
+                            target: {
+                                    "project_title": target.find("[window-data='project_title']")[0].innerHTML,
+                                    "category":      target.find("[window-data='category']")[0].innerHTML,
+                                    "description":   target.find("[window-data='description']")[0].innerHTML,
+                                    "site_url":      $(target.find("[window-data='site_url']")[0]).find('a').attr('href'),
+                                    "github_repo":   $(target.find("[window-data='github_repo']")[0]).find('a').attr('href'),
+                                    "technologies":  technology_array
+                                    }
+                            }
+        window.technology = target.find("[window-data='technology']")
+        var source = $('#portfolio_modal').html();
+        var template = Handlebars.compile(source);
+        var modal = template(data_hash);
+
+        $('body').prepend(modal)
+        $('#main_container').css("background", "#4c4c4c").animate({ opacity: 0.3 }, 100)
+        $("[window-data='project_title']").css("color", "#cccccc").animate({ opacity: 0.3 }, 100)
+        $("[window-data='category']").css("color", "#b3b3b3").animate({ opacity: 0.3 }, 100)
+        $("div[window-type='modal']").delay(50).animate({ opacity: 1 }, 175)
+
+        $(".exit_modal").click(function(e){
+          $("[window-type='modal']").slideUp({duration: 200}, function(){ $(this).remove(); });
+          $('#main_container').removeAttr('style');
+          $("[window-data='project_title']").removeAttr('style');
+          $("[window-data='category']").removeAttr('style');
+        })
+
       })
     }
 

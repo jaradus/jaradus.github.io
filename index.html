@@ -149,22 +149,22 @@
          <img src="{{image_url}}">
        </div>
        <div class="text">
-          <p class="red_bar">{{category}}</p>
-          <h1>{{project_title}}</h1>
+          <p class="red_bar" window-data="category">{{category}}</p>
+          <h1 window-data="project_title">{{project_title}}</h1>
           <div hover_info>
-            <p>{{description}}</p>
+            <p window-data="description">{{description}}</p>
             <p>
-              {{#if site_url}}<span><a target="_blank" href="{{site_url}}"><i class="fa fa-external-link"></i> Site</a></span>{{/if}}
-              {{#if github_repo}}<span><a target="_blank" href="{{github_repo}}"><i class="fa fa-github"></i> Github Repo</a></span>{{/if}}
+              {{#if site_url}}<span window-data="site_url"><a target="_blank" href="{{site_url}}"><i class="fa fa-external-link"></i> Site</a></span>{{/if}}
+              {{#if github_repo}}<span window-data="github_repo"><a target="_blank" href="{{github_repo}}"><i class="fa fa-github"></i> Github Repo</a></span>{{/if}}
             </p>
-            <p>
-              <span>Technologies:</span>
-              {{#if technologies}}
-                {{#technologies}}
-                  <span>{{this}}</span>
-                {{/technologies}}
-              {{/if}}
-            </p>
+            {{#if technologies}}
+              <p>
+                <span>Technologies:</span>
+                  {{#technologies}}
+                    <span window-data="technology">{{this}}</span>
+                  {{/technologies}}
+              </p>
+            {{/if}}
           </div>
         </div>
       </li>
@@ -178,25 +178,26 @@
 <script id="portfolio_modal" type="text/x-handlebars-template">
 
   <div window-type="modal">
-    <div class="text">
-      <p class="red_bar">{{category}}</p>
-      <h1>{{project_title}}</h1>
-      <div hover_info>
-        <p>{{description}}</p>
+  {{#target}}
+    <h1>{{project_title}}</h1>
+    <p>{{category}}</p>
+    <div>
+      <p>{{description}}</p>
+      <p>
+        {{#if site_url}}<span><a target="_blank" href="{{site_url}}"><i class="fa fa-external-link"></i> Site</a></span>{{/if}}
+        {{#if github_repo}}<span><a target="_blank" href="{{github_repo}}"><i class="fa fa-github"></i> Github Repo</a></span>{{/if}}
+      </p>
+      {{#if technologies}}
         <p>
-          {{#if site_url}}<span><a target="_blank" href="{{site_url}}"><i class="fa fa-external-link"></i> Site</a></span>{{/if}}
-          {{#if github_repo}}<span><a target="_blank" href="{{github_repo}}"><i class="fa fa-github"></i> Github Repo</a></span>{{/if}}
-        </p>
-        <p>
-          <span>Technologies:</span>
-          {{#if technologies}}
+          <span>Technologies</span>
             {{#technologies}}
-              <span>{{this}}</span>
+              <span window-data="technology">{{this}}</span>
             {{/technologies}}
-          {{/if}}
         </p>
-      </div>
+      {{/if}}
     </div>
+  {{/target}}
+    <div class="exit_modal">x</div>
   </div>
 
 </script>
