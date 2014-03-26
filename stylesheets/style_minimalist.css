@@ -335,6 +335,7 @@
 
   .info-panel {
     vertical-align: top;
+    padding-right: 15px;
   }
 
   .info-panel h3 {
@@ -495,6 +496,25 @@
 /* ###################################### */
 /* #### Mobile Responsive Formatting #### */
 /* ###################################### */
+
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 0;
+  }
+
+  nav {
+    margin-right: 7em;
+  }
+
+}
+
+@media (max-width: 800px) {
+  nav {
+    margin-right: 3em;
+  }
+}
+
+
 
 @media (max-width: 768px) {
 
