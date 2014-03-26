@@ -255,7 +255,7 @@
   .home-header h1 {
     font-family: 'Athelas-Bold';
     font-size: 50px;
-    color: #00FFD1;
+    color: #ffffff;
     line-height: 10px;
     letter-spacing: 1px;
     margin-bottom: 5%;
@@ -264,7 +264,7 @@
   .home-header h2 {
     font-family: 'HelveticaNeue-Thin';
     font-size: 30px;
-    color: #000000;
+    color: #00FFD1;
     line-height: 36px;
     letter-spacing: 1px;
   }
